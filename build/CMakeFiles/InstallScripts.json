@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/cmake_install.cmake",
+		"C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/thirdparty/glfw/cmake_install.cmake",
+		"C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/thirdparty/glfw/src/cmake_install.cmake",
+		"C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/thirdparty/glfw/docs/cmake_install.cmake",
+		"C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/thirdparty/glm/cmake_install.cmake",
+		"C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/thirdparty/glm/glm/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

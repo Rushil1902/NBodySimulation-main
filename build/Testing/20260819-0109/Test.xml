@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-mingw32-make"
+	BuildStamp="20260819-0109-Experimental"
+	Name="DESKTOP-1QPQ89F"
+	Generator="ctest-4.2.3"
+	CompilerName="C:/mingw32/bin/g++.exe"
+	CompilerVersion="15.2.0"
+	OSName="Windows"
+	Hostname="DESKTOP-1QPQ89F"
+	OSRelease="10.0.19045"
+	OSVersion="Windows 10"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="15"
+	ModelID="1"
+	ModelName="AMD Ryzen 5 5600X 6-Core Processor"
+	ProcessorCacheSize="64"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="39861"
+	TotalPhysicalMemory="32693"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="3701"
+	>
+	<Testing>
+		<StartDateTime>Aug 20 03:37 Eastern Daylight Time</StartDateTime>
+		<StartTestTime>1787211455</StartTestTime>
+		<TestList/>
+		<EndDateTime>Aug 20 03:37 Eastern Daylight Time</EndDateTime>
+		<EndTestTime>1787211455</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

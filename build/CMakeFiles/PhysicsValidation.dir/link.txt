@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\PhysicsValidation.dir/objects.a
+C:\mingw32\bin\ar.exe qc CMakeFiles\PhysicsValidation.dir/objects.a @CMakeFiles\PhysicsValidation.dir\objects1.rsp
+C:\mingw32\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\PhysicsValidation.dir/objects.a -Wl,--no-whole-archive -o PhysicsValidation.exe -Wl,--out-implib,libPhysicsValidation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PhysicsValidation.dir\linkLibs.rsp

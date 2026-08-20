@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/core/Mesh.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/core/Mesh.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/geometry/ShapeGenerator.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/geometry/ShapeGenerator.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/geometry/Transform.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/geometry/Transform.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/glad.c.obj"
+  "CMakeFiles/NBodySimulation.dir/src/glad.c.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/graphics/camera.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/graphics/camera.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/main.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/main.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/physics/Physics.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/physics/Physics.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/physics/RigidBody.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/physics/RigidBody.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/rendering/Renderer.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/rendering/Renderer.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/scene/Scene.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/scene/Scene.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.obj.d"
+  "CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj"
+  "CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj.d"
+  "NBodySimulation.exe"
+  "NBodySimulation.exe.manifest"
+  "NBodySimulation.pdb"
+  "libNBodySimulation.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C CXX)
+  include(CMakeFiles/NBodySimulation.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

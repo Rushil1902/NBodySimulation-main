@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\NBodySimulation.dir/objects.a
+C:\mingw32\bin\ar.exe qc CMakeFiles\NBodySimulation.dir/objects.a @CMakeFiles\NBodySimulation.dir\objects1.rsp
+C:\mingw32\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\NBodySimulation.dir/objects.a -Wl,--no-whole-archive -o NBodySimulation.exe -Wl,--out-implib,libNBodySimulation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\NBodySimulation.dir\linkLibs.rsp

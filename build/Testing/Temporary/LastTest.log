@@ -1,0 +1,23 @@
+Start testing: Aug 20 03:04 Eastern Daylight Time
+----------------------------------------------------------
+1/1 Testing: TwoBodyOrbitValidation
+1/1 Test: TwoBodyOrbitValidation
+Command: "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/PhysicsValidation.exe"
+Directory: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build
+"TwoBodyOrbitValidation" start time: Aug 20 03:04 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+Two-body validation after 10 years
+  relative energy drift: 2.05734e-15
+  relative angular momentum drift: 1.07722e-15
+  maximum separation error (AU): 4.9351e-06
+PASS
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"TwoBodyOrbitValidation" end time: Aug 20 03:04 Eastern Daylight Time
+"TwoBodyOrbitValidation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 20 03:04 Eastern Daylight Time
