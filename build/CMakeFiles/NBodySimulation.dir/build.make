@@ -251,11 +251,26 @@ CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.s"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\simulation\Simulation.cpp -o CMakeFiles\NBodySimulation.dir\src\simulation\Simulation.cpp.s
 
+CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
+CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
+CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/ui/UserInterface.cpp
+CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj -MF CMakeFiles\NBodySimulation.dir\src\ui\UserInterface.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\src\ui\UserInterface.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\ui\UserInterface.cpp
+
+CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\ui\UserInterface.cpp > CMakeFiles\NBodySimulation.dir\src\ui\UserInterface.cpp.i
+
+CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\ui\UserInterface.cpp -o CMakeFiles\NBodySimulation.dir\src\ui\UserInterface.cpp.s
+
 CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
 CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
 CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/textures/stb_image.cpp
 CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj -MF CMakeFiles\NBodySimulation.dir\src\textures\stb_image.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\src\textures\stb_image.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\textures\stb_image.cpp
 
 CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.i: cmake_force
@@ -270,7 +285,7 @@ CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj: CMakeFiles/NBodySimu
 CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
 CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/SkyboxMesh.cpp
 CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj -MF CMakeFiles\NBodySimulation.dir\src\core\SkyboxMesh.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\src\core\SkyboxMesh.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\core\SkyboxMesh.cpp
 
 CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.i: cmake_force
@@ -285,7 +300,7 @@ CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj: CMakeFiles/NBodySimul
 CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
 CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/TrailMesh.cpp
 CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj -MF CMakeFiles\NBodySimulation.dir\src\core\TrailMesh.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\src\core\TrailMesh.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\core\TrailMesh.cpp
 
 CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.i: cmake_force
@@ -300,7 +315,7 @@ CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj: CMakeFiles/NBo
 CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
 CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/SpaceTimeGrid.cpp
 CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj -MF CMakeFiles\NBodySimulation.dir\src\physics\SpaceTimeGrid.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\src\physics\SpaceTimeGrid.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\physics\SpaceTimeGrid.cpp
 
 CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.i: cmake_force
@@ -310,6 +325,96 @@ CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.i: cmake_force
 CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.s"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\src\physics\SpaceTimeGrid.cpp -o CMakeFiles\NBodySimulation.dir\src\physics\SpaceTimeGrid.cpp.s
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui.cpp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj -MF CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui.cpp
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui.cpp > CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui.cpp.i
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui.cpp -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui.cpp.s
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_draw.cpp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj -MF CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_draw.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_draw.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_draw.cpp
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_draw.cpp > CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_draw.cpp.i
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_draw.cpp -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_draw.cpp.s
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_tables.cpp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj -MF CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_tables.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_tables.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_tables.cpp
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_tables.cpp > CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_tables.cpp.i
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_tables.cpp -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_tables.cpp.s
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_widgets.cpp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj -MF CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_widgets.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_widgets.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_widgets.cpp
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_widgets.cpp > CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_widgets.cpp.i
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\imgui_widgets.cpp -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\imgui_widgets.cpp.s
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/backends/imgui_impl_glfw.cpp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj -MF CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_glfw.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_glfw.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\backends\imgui_impl_glfw.cpp
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\backends\imgui_impl_glfw.cpp > CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_glfw.cpp.i
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\backends\imgui_impl_glfw.cpp -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_glfw.cpp.s
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj: CMakeFiles/NBodySimulation.dir/flags.make
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj: CMakeFiles/NBodySimulation.dir/includes_CXX.rsp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/backends/imgui_impl_opengl3.cpp
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj: CMakeFiles/NBodySimulation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj -MF CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_opengl3.cpp.obj.d -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_opengl3.cpp.obj -c C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\backends\imgui_impl_opengl3.cpp
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\backends\imgui_impl_opengl3.cpp > CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_opengl3.cpp.i
+
+CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\thirdparty\imgui\backends\imgui_impl_opengl3.cpp -o CMakeFiles\NBodySimulation.dir\thirdparty\imgui\backends\imgui_impl_opengl3.cpp.s
 
 # Object files for target NBodySimulation
 NBodySimulation_OBJECTS = \
@@ -325,10 +430,17 @@ NBodySimulation_OBJECTS = \
 "CMakeFiles/NBodySimulation.dir/src/rendering/Renderer.cpp.obj" \
 "CMakeFiles/NBodySimulation.dir/src/scene/Scene.cpp.obj" \
 "CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.obj" \
+"CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj" \
 "CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj" \
 "CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj" \
 "CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj" \
-"CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj"
+"CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj" \
+"CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj" \
+"CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj" \
+"CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj" \
+"CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj" \
+"CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj" \
+"CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj"
 
 # External object files for target NBodySimulation
 NBodySimulation_EXTERNAL_OBJECTS =
@@ -345,16 +457,23 @@ NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/graphics/camera.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/rendering/Renderer.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/scene/Scene.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.obj
+NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/core/SkyboxMesh.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/core/TrailMesh.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj
+NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj
+NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj
+NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj
+NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj
+NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj
+NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/build.make
 NBodySimulation.exe: thirdparty/glfw/src/libglfw3.a
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/linkLibs.rsp
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/objects1.rsp
 NBodySimulation.exe: CMakeFiles/NBodySimulation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable NBodySimulation.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable NBodySimulation.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\NBodySimulation.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

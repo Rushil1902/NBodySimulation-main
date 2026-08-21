@@ -1,10 +1,10 @@
-Start testing: Aug 20 03:04 Eastern Daylight Time
+Start testing: Aug 21 03:51 Eastern Daylight Time
 ----------------------------------------------------------
 1/1 Testing: TwoBodyOrbitValidation
 1/1 Test: TwoBodyOrbitValidation
 Command: "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/PhysicsValidation.exe"
 Directory: C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build
-"TwoBodyOrbitValidation" start time: Aug 20 03:04 Eastern Daylight Time
+"TwoBodyOrbitValidation" start time: Aug 21 03:51 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Two-body validation after 10 years
@@ -13,11 +13,11 @@ Two-body validation after 10 years
   maximum separation error (AU): 4.9351e-06
 PASS
 <end of output>
-Test time =   0.17 sec
+Test time =   0.16 sec
 ----------------------------------------------------------
 Test Passed.
-"TwoBodyOrbitValidation" end time: Aug 20 03:04 Eastern Daylight Time
+"TwoBodyOrbitValidation" end time: Aug 21 03:51 Eastern Daylight Time
 "TwoBodyOrbitValidation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 20 03:04 Eastern Daylight Time
+End testing: Aug 21 03:51 Eastern Daylight Time

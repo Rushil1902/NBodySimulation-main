@@ -45,6 +45,7 @@ void RigidBody::clearPath()
 
 void RigidBody::loadTexture(const std::string& filepath)
 {
+    texturePath = filepath;
     glGenTextures(1, &textureID);
     glBindTexture(GL_TEXTURE_2D, textureID);
 

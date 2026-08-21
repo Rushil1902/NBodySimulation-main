@@ -25,17 +25,17 @@ bool Simulation::update(double realFrameSeconds)
         accumulatedTime += boundedFrameTime * simulationRate;
 
         int physicsSteps = 0;
-        while (accumulatedTime >= fixedTimeStepYears
+        while (accumulatedTime >= physicsTimeStep
                && physicsSteps < maxPhysicsStepsPerFrame)
         {
             advanceOneStep();
-            accumulatedTime -= fixedTimeStepYears;
+            accumulatedTime -= physicsTimeStep;
             ++physicsSteps;
         }
 
         physicsAdvanced = physicsSteps > 0;
         if (physicsSteps == maxPhysicsStepsPerFrame)
-            accumulatedTime = std::fmod(accumulatedTime, fixedTimeStepYears);
+            accumulatedTime = std::fmod(accumulatedTime, physicsTimeStep);
     }
 
     validateState();
@@ -44,7 +44,12 @@ bool Simulation::update(double realFrameSeconds)
 
 void Simulation::togglePaused()
 {
-    paused = !paused;
+    setPaused(!paused);
+}
+
+void Simulation::setPaused(bool shouldPause)
+{
+    paused = shouldPause;
     accumulatedTime = 0.0;
 }
 
@@ -75,6 +80,31 @@ void Simulation::decreaseSpeed()
     simulationRate = std::max(simulationRate * 0.5, 0.001);
 }
 
+void Simulation::setYearsPerRealSecond(double yearsPerSecond)
+{
+    simulationRate = std::clamp(yearsPerSecond, 0.001, 64.0);
+}
+
+void Simulation::setTimeStepYears(double timeStepYears)
+{
+    physicsTimeStep = std::clamp(timeStepYears, 1.0e-6, 0.1);
+    accumulatedTime = 0.0;
+}
+
+void Simulation::setSofteningLengthAU(double softeningLengthAU)
+{
+    physicsEngine.setSofteningLength(softeningLengthAU);
+    notifySceneChanged();
+}
+
+void Simulation::notifySceneChanged()
+{
+    initialEnergy = physicsEngine.totalEnergy();
+    accumulatedTime = 0.0;
+    numericalFailureReported = false;
+    paused = true;
+}
+
 bool Simulation::isPaused() const
 {
     return paused;
@@ -90,6 +120,21 @@ double Simulation::yearsPerRealSecond() const
     return simulationRate;
 }
 
+double Simulation::timeStepYears() const
+{
+    return physicsTimeStep;
+}
+
+double Simulation::softeningLengthAU() const
+{
+    return physicsEngine.getSofteningLength();
+}
+
+double Simulation::totalEnergy() const
+{
+    return physicsEngine.totalEnergy();
+}
+
 double Simulation::relativeEnergyDrift() const
 {
     if (initialEnergy == 0.0)
@@ -98,10 +143,20 @@ double Simulation::relativeEnergyDrift() const
     return (physicsEngine.totalEnergy() - initialEnergy) / std::abs(initialEnergy);
 }
 
+glm::dvec3 Simulation::totalMomentum() const
+{
+    return physicsEngine.totalMomentum();
+}
+
+glm::dvec3 Simulation::totalAngularMomentum() const
+{
+    return physicsEngine.totalAngularMomentum();
+}
+
 void Simulation::advanceOneStep()
 {
-    physicsEngine.updatePhysics(fixedTimeStepYears);
-    simulationTime += fixedTimeStepYears;
+    physicsEngine.updatePhysics(physicsTimeStep);
+    simulationTime += physicsTimeStep;
 }
 
 void Simulation::validateState()

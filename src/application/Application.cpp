@@ -3,6 +3,7 @@
 #include "rendering/Renderer.hpp"
 #include "scene/Scene.hpp"
 #include "simulation/Simulation.hpp"
+#include "ui/UserInterface.hpp"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -33,8 +34,12 @@ int Application::run()
 
     while (!glfwWindowShouldClose(window))
     {
+        renderer->setCameraInputEnabled(!userInterface->wantsMouseCapture());
         glfwPollEvents();
+        userInterface->beginFrame();
+        renderer->setCameraInputEnabled(!userInterface->wantsMouseCapture());
         processInput();
+        userInterface->draw(*scene, *simulation, *renderer);
 
         const double currentTime = glfwGetTime();
         const double realFrameTime = currentTime - previousFrameTime;
@@ -42,6 +47,7 @@ int Application::run()
 
         const bool physicsAdvanced = simulation->update(realFrameTime);
         renderer->render(*scene, physicsAdvanced, currentTime);
+        userInterface->render();
         updateWindowTitle(currentTime);
 
         glfwSwapBuffers(window);
@@ -83,11 +89,13 @@ bool Application::initialize()
     renderer->attachToWindow(window);
     scene = std::make_unique<Scene>(Scene::createDefault());
     simulation = std::make_unique<Simulation>(*scene);
+    userInterface = std::make_unique<UserInterface>(window);
     return true;
 }
 
 void Application::shutdown()
 {
+    userInterface.reset();
     simulation.reset();
     scene.reset();
     renderer.reset();
@@ -109,6 +117,9 @@ void Application::processInput()
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GLFW_TRUE);
+
+    if (userInterface && userInterface->wantsKeyboardCapture())
+        return;
 
     if (keyPressedOnce(GLFW_KEY_SPACE, spaceWasPressed))
         simulation->togglePaused();

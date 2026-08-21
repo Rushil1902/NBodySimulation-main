@@ -10,6 +10,7 @@
 
 struct GLFWwindow;
 class Scene;
+class RigidBody;
 
 class Renderer {
 public:
@@ -20,6 +21,13 @@ public:
     void resize(int width, int height);
     void setGridVisible(bool visible);
     bool isGridVisible() const;
+    GravityFieldSettings& gravityFieldSettings();
+    const GravityFieldSettings& gravityFieldSettings() const;
+    void setTrailsVisible(bool visible);
+    bool areTrailsVisible() const;
+    void focusOnBody(const RigidBody& body);
+    void resetCameraFocus();
+    void setCameraInputEnabled(bool enabled);
 
 private:
     static Renderer* fromWindow(GLFWwindow* window);
@@ -40,6 +48,9 @@ private:
     Mesh sphereMesh;
     TrailMesh trailMesh;
     SpaceTimeGrid grid;
+    GravityFieldSettings fieldSettings;
     Camera camera;
-    bool gridVisible = false;
+    bool gridVisible = true;
+    bool trailsVisible = true;
+    bool cameraInputEnabled = true;
 };

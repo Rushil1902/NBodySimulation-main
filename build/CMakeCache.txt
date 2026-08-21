@@ -335,6 +335,9 @@ DART_TESTING_TIMEOUT:STRING=1500
 //Doxygen documentation generation tool (https://www.doxygen.nl)
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
+//Path to a program.
+GITCOMMAND:FILEPATH=C:/Program Files/Git/cmd/git.exe
+
 //Value Computed by CMake
 GLFW_BINARY_DIR:STATIC=C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/thirdparty/glfw
 
@@ -674,6 +677,8 @@ DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[opengl32][ ][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GITCOMMAND
+GITCOMMAND-ADVANCED:INTERNAL=1
 //GLFW pkg-config Libs.private
 GLFW_PKG_CONFIG_LIBS_PRIVATE:INTERNAL=-lgdi32
 //GLFW pkg-config Requires.private

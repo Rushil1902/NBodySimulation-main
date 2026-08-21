@@ -24,6 +24,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/scene/Scene.cpp" "CMakeFiles/NBodySimulation.dir/src/scene/Scene.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/src/scene/Scene.cpp.obj.d"
   "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/simulation/Simulation.cpp" "CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/src/simulation/Simulation.cpp.obj.d"
   "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/textures/stb_image.cpp" "CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj.d"
+  "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/ui/UserInterface.cpp" "CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj.d"
+  "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/backends/imgui_impl_glfw.cpp" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj.d"
+  "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/backends/imgui_impl_opengl3.cpp" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj.d"
+  "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui.cpp" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj.d"
+  "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_draw.cpp" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj.d"
+  "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_tables.cpp" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj.d"
+  "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_widgets.cpp" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj" "gcc" "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

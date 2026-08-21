@@ -10,6 +10,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectory(thirdparty/glfw)
 add_subdirectory(thirdparty/glm)
 
+set(IMGUI_DIR ${CMAKE_SOURCE_DIR}/thirdparty/imgui)
+
 # Make sure to define where OpenGL is located, on Windows this is generally available
 find_package(OpenGL REQUIRED)
 
@@ -28,10 +30,17 @@ add_executable(NBodySimulation
     src/rendering/Renderer.cpp
     src/scene/Scene.cpp
     src/simulation/Simulation.cpp
+    src/ui/UserInterface.cpp
     src/textures/stb_image.cpp
     src/core/SkyboxMesh.cpp
     src/core/TrailMesh.cpp
     src/physics/SpaceTimeGrid.cpp
+    ${IMGUI_DIR}/imgui.cpp
+    ${IMGUI_DIR}/imgui_draw.cpp
+    ${IMGUI_DIR}/imgui_tables.cpp
+    ${IMGUI_DIR}/imgui_widgets.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
     )
 
 # Link libraries
@@ -45,6 +54,8 @@ target_include_directories(NBodySimulation PRIVATE
     ${CMAKE_SOURCE_DIR}/thirdparty/KHR/include
     ${CMAKE_SOURCE_DIR}/thirdparty/glm
     ${CMAKE_SOURCE_DIR}/thirdparty/stb
+    ${IMGUI_DIR}
+    ${IMGUI_DIR}/backends
 
     )
 

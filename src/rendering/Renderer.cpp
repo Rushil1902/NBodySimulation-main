@@ -32,7 +32,7 @@ Renderer::Renderer()
       starTransforms(starShader),
       planetTransforms(planetShader),
       sphereMesh(ShapeGenerator::makeUnitSphere(128, 128)),
-      grid(50.0f, 50),
+      grid(64),
       camera(cameraShader)
 {
     const std::vector<std::string> faces = {
@@ -59,6 +59,7 @@ Renderer::Renderer()
         nearPlane,
         farPlane);
     camera.setCameraPosition(glm::vec3(0.0f, 0.0f, -50.0f));
+    camera.setOrbitAngles(0.0f, glm::radians(-25.0f));
 }
 
 void Renderer::attachToWindow(GLFWwindow* window)
@@ -126,16 +127,19 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
         sphereMesh.draw();
     }
 
-    pathShader.use();
-    pathShader.setMat4("view", camera.getViewMatrix());
-    pathShader.setMat4("projection", camera.getPerspectiveMatrix());
-    for (RigidBody& body : scene.bodies())
+    if (trailsVisible)
     {
-        if (physicsAdvanced)
-            body.updatePath(RenderScale::position(body.position));
+        pathShader.use();
+        pathShader.setMat4("view", camera.getViewMatrix());
+        pathShader.setMat4("projection", camera.getPerspectiveMatrix());
+        for (RigidBody& body : scene.bodies())
+        {
+            if (physicsAdvanced)
+                body.updatePath(RenderScale::position(body.position));
 
-        trailMesh.updateTrail(body.path, body.pathAlphas);
-        trailMesh.draw();
+            trailMesh.updateTrail(body.path, body.pathAlphas);
+            trailMesh.draw();
+        }
     }
 
     glDepthFunc(GL_LEQUAL);
@@ -150,8 +154,19 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
         gridShader.use();
         gridShader.setMat4("view", camera.getViewMatrix());
         gridShader.setMat4("projection", camera.getPerspectiveMatrix());
-        grid.updateGrid(scene.bodies());
-        grid.draw();
+        gridShader.setFloat("surfaceOpacity", fieldSettings.surfaceOpacity);
+        grid.update(scene.bodies(), fieldSettings);
+
+        if (fieldSettings.surfaceVisible)
+        {
+            gridShader.setBool("surfacePass", true);
+            glDepthMask(GL_FALSE);
+            grid.drawSurface();
+            glDepthMask(GL_TRUE);
+        }
+
+        gridShader.setBool("surfacePass", false);
+        grid.drawLines();
     }
 }
 
@@ -179,6 +194,41 @@ bool Renderer::isGridVisible() const
     return gridVisible;
 }
 
+GravityFieldSettings& Renderer::gravityFieldSettings()
+{
+    return fieldSettings;
+}
+
+const GravityFieldSettings& Renderer::gravityFieldSettings() const
+{
+    return fieldSettings;
+}
+
+void Renderer::setTrailsVisible(bool visible)
+{
+    trailsVisible = visible;
+}
+
+bool Renderer::areTrailsVisible() const
+{
+    return trailsVisible;
+}
+
+void Renderer::focusOnBody(const RigidBody& body)
+{
+    camera.setFocusPoint(RenderScale::position(body.position));
+}
+
+void Renderer::resetCameraFocus()
+{
+    camera.resetFocusPoint();
+}
+
+void Renderer::setCameraInputEnabled(bool enabled)
+{
+    cameraInputEnabled = enabled;
+}
+
 Renderer* Renderer::fromWindow(GLFWwindow* window)
 {
     return static_cast<Renderer*>(glfwGetWindowUserPointer(window));
@@ -192,18 +242,19 @@ void Renderer::framebufferSizeCallback(GLFWwindow* window, int width, int height
 
 void Renderer::scrollCallback(GLFWwindow* window, double xOffset, double yOffset)
 {
-    if (Renderer* renderer = fromWindow(window))
+    if (Renderer* renderer = fromWindow(window); renderer && renderer->cameraInputEnabled)
         renderer->camera.scroll_callback(xOffset, yOffset);
 }
 
 void Renderer::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 {
-    if (Renderer* renderer = fromWindow(window))
+    if (Renderer* renderer = fromWindow(window);
+        renderer && (renderer->cameraInputEnabled || action == GLFW_RELEASE))
         renderer->camera.mouse_button_callback(window, button, action, mods);
 }
 
 void Renderer::cursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
 {
-    if (Renderer* renderer = fromWindow(window))
+    if (Renderer* renderer = fromWindow(window); renderer && renderer->cameraInputEnabled)
         renderer->camera.cursor_position_callback(xpos, ypos);
 }

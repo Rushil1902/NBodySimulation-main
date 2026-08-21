@@ -2,6 +2,7 @@
 
 #include "physics/RigidBody.hpp"
 
+#include <cstddef>
 #include <vector>
 
 class Scene {
@@ -10,6 +11,8 @@ public:
 
     std::vector<RigidBody>& bodies();
     const std::vector<RigidBody>& bodies() const;
+    void addBody(RigidBody body);
+    bool removeBody(std::size_t bodyIndex);
     void reset();
 
 private:

@@ -13,6 +13,8 @@ class RigidBody{
 
         double bodyMass;   // Solar masses
         double bodyRadius; // Astronomical units
+        std::string name = "Body";
+        std::string texturePath;
         
         glm::dvec3 position;     // AU
         glm::dvec3 velocity;     // AU / year

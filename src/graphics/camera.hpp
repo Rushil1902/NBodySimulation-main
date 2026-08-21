@@ -17,6 +17,9 @@ class Camera{
         void mouse_button_callback(GLFWwindow* window,int button, int action, int mods);
         void cursor_position_callback(double xpos, double ypos);
         void setCameraPosition(glm::vec3 camPosition);
+        void setOrbitAngles(float yawRadians, float pitchRadians);
+        void setFocusPoint(const glm::vec3& point);
+        void resetFocusPoint();
         void setPerspective(float fov, float aspectRation, float nearFrame, float farFrame);
         void updateCameraPosition();
         glm::mat4 getViewMatrix();
@@ -32,5 +35,6 @@ class Camera{
         double lastMouseX, lastMouseY;
         glm::mat4 viewMatrix;
         glm::mat4 projectionMatrix;
+        glm::vec3 focusPoint = glm::vec3(0.0f);
         Shader& ourShader;
 };

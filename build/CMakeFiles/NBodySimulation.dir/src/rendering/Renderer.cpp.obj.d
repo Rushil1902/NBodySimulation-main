@@ -352,7 +352,7 @@ CMakeFiles/NBodySimulation.dir/src/rendering/Renderer.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glfw/include/GLFW/glfw3.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/shader.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/SpaceTimeGrid.hpp \
- C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/RigidBody.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/geometry/ShapeGenerator.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/rendering/RenderScale.hpp \
- C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/scene/Scene.hpp
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/scene/Scene.hpp \
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/RigidBody.hpp

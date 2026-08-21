@@ -73,6 +73,12 @@
 },
 {
   "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
+  "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\src\\ui\\UserInterface.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\src\\ui\\UserInterface.cpp",
+  "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/ui/UserInterface.cpp",
+  "output": "CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj"
+},
+{
+  "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
   "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\src\\textures\\stb_image.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\src\\textures\\stb_image.cpp",
   "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/textures/stb_image.cpp",
   "output": "CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.obj"
@@ -94,6 +100,42 @@
   "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\src\\physics\\SpaceTimeGrid.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\src\\physics\\SpaceTimeGrid.cpp",
   "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/SpaceTimeGrid.cpp",
   "output": "CMakeFiles/NBodySimulation.dir/src/physics/SpaceTimeGrid.cpp.obj"
+},
+{
+  "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
+  "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\thirdparty\\imgui\\imgui.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\thirdparty\\imgui\\imgui.cpp",
+  "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui.cpp",
+  "output": "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj"
+},
+{
+  "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
+  "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\thirdparty\\imgui\\imgui_draw.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\thirdparty\\imgui\\imgui_draw.cpp",
+  "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj"
+},
+{
+  "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
+  "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\thirdparty\\imgui\\imgui_tables.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\thirdparty\\imgui\\imgui_tables.cpp",
+  "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_tables.cpp",
+  "output": "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj"
+},
+{
+  "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
+  "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\thirdparty\\imgui\\imgui_widgets.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\thirdparty\\imgui\\imgui_widgets.cpp",
+  "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/imgui_widgets.cpp",
+  "output": "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj"
+},
+{
+  "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
+  "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\thirdparty\\imgui\\backends\\imgui_impl_glfw.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\thirdparty\\imgui\\backends\\imgui_impl_glfw.cpp",
+  "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj"
+},
+{
+  "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",
+  "command": "C:\\mingw32\\bin\\g++.exe  @CMakeFiles/NBodySimulation.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\NBodySimulation.dir\\thirdparty\\imgui\\backends\\imgui_impl_opengl3.cpp.obj -c C:\\Users\\rushi\\OneDrive\\Documents\\NBodySimulation-main\\thirdparty\\imgui\\backends\\imgui_impl_opengl3.cpp",
+  "file": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj"
 },
 {
   "directory": "C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build",

@@ -368,10 +368,11 @@ CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glfw/include/GLFW/glfw3.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/shader.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/SpaceTimeGrid.hpp \
- C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/RigidBody.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/scene/Scene.hpp \
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/RigidBody.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/simulation/Simulation.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/Physics.hpp \
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/ui/UserInterface.hpp \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/filesystem \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/chrono.h \

@@ -23,6 +23,7 @@ void Camera::updateCameraPosition()
 
     viewMatrix = glm::rotate(viewMatrix,position.x,glm::vec3(0.0f,1.0f,0.0f));
     viewMatrix = glm::rotate(viewMatrix,position.y,glm::vec3(1.0f,0.0f,0.0f));
+    viewMatrix = glm::translate(viewMatrix, -focusPoint);
     ourShader.setMat4("view",viewMatrix);    
 }
 void Camera::setCameraPosition(glm::vec3 camPosition)
@@ -31,6 +32,22 @@ void Camera::setCameraPosition(glm::vec3 camPosition)
     ourShader.setMat4("view", viewMatrix);
     position = camPosition;
 
+}
+
+void Camera::setOrbitAngles(float yawRadians, float pitchRadians)
+{
+    rotationX = yawRadians;
+    rotationY = pitchRadians;
+}
+
+void Camera::setFocusPoint(const glm::vec3& point)
+{
+    focusPoint = point;
+}
+
+void Camera::resetFocusPoint()
+{
+    focusPoint = glm::vec3(0.0f);
 }
 
 void Camera::setPerspective(float fov, float aspectRatio, float nearFrame, float farFrame)

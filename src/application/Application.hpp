@@ -6,6 +6,7 @@ struct GLFWwindow;
 class Renderer;
 class Scene;
 class Simulation;
+class UserInterface;
 
 class Application {
 public:
@@ -29,6 +30,7 @@ private:
     std::unique_ptr<Renderer> renderer;
     std::unique_ptr<Scene> scene;
     std::unique_ptr<Simulation> simulation;
+    std::unique_ptr<UserInterface> userInterface;
     double previousFrameTime = 0.0;
     double lastTitleUpdateTime = 0.0;
     bool spaceWasPressed = false;

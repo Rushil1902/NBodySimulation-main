@@ -999,6 +999,30 @@ src/textures/stb_image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/src/textures/stb_image.cpp.s
 .PHONY : src/textures/stb_image.cpp.s
 
+src/ui/UserInterface.obj: src/ui/UserInterface.cpp.obj
+.PHONY : src/ui/UserInterface.obj
+
+# target to build an object file
+src/ui/UserInterface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj
+.PHONY : src/ui/UserInterface.cpp.obj
+
+src/ui/UserInterface.i: src/ui/UserInterface.cpp.i
+.PHONY : src/ui/UserInterface.i
+
+# target to preprocess a source file
+src/ui/UserInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.i
+.PHONY : src/ui/UserInterface.cpp.i
+
+src/ui/UserInterface.s: src/ui/UserInterface.cpp.s
+.PHONY : src/ui/UserInterface.s
+
+# target to generate assembly for a file
+src/ui/UserInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.s
+.PHONY : src/ui/UserInterface.cpp.s
+
 tests/PhysicsValidation.obj: tests/PhysicsValidation.cpp.obj
 .PHONY : tests/PhysicsValidation.obj
 
@@ -1022,6 +1046,150 @@ tests/PhysicsValidation.s: tests/PhysicsValidation.cpp.s
 tests/PhysicsValidation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysicsValidation.dir\build.make CMakeFiles/PhysicsValidation.dir/tests/PhysicsValidation.cpp.s
 .PHONY : tests/PhysicsValidation.cpp.s
+
+thirdparty/imgui/backends/imgui_impl_glfw.obj: thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj
+.PHONY : thirdparty/imgui/backends/imgui_impl_glfw.obj
+
+# target to build an object file
+thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj
+.PHONY : thirdparty/imgui/backends/imgui_impl_glfw.cpp.obj
+
+thirdparty/imgui/backends/imgui_impl_glfw.i: thirdparty/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : thirdparty/imgui/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+thirdparty/imgui/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : thirdparty/imgui/backends/imgui_impl_glfw.cpp.i
+
+thirdparty/imgui/backends/imgui_impl_glfw.s: thirdparty/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : thirdparty/imgui/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+thirdparty/imgui/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : thirdparty/imgui/backends/imgui_impl_glfw.cpp.s
+
+thirdparty/imgui/backends/imgui_impl_opengl3.obj: thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj
+.PHONY : thirdparty/imgui/backends/imgui_impl_opengl3.obj
+
+# target to build an object file
+thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj
+.PHONY : thirdparty/imgui/backends/imgui_impl_opengl3.cpp.obj
+
+thirdparty/imgui/backends/imgui_impl_opengl3.i: thirdparty/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : thirdparty/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+thirdparty/imgui/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : thirdparty/imgui/backends/imgui_impl_opengl3.cpp.i
+
+thirdparty/imgui/backends/imgui_impl_opengl3.s: thirdparty/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : thirdparty/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+thirdparty/imgui/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : thirdparty/imgui/backends/imgui_impl_opengl3.cpp.s
+
+thirdparty/imgui/imgui.obj: thirdparty/imgui/imgui.cpp.obj
+.PHONY : thirdparty/imgui/imgui.obj
+
+# target to build an object file
+thirdparty/imgui/imgui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.obj
+.PHONY : thirdparty/imgui/imgui.cpp.obj
+
+thirdparty/imgui/imgui.i: thirdparty/imgui/imgui.cpp.i
+.PHONY : thirdparty/imgui/imgui.i
+
+# target to preprocess a source file
+thirdparty/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.i
+.PHONY : thirdparty/imgui/imgui.cpp.i
+
+thirdparty/imgui/imgui.s: thirdparty/imgui/imgui.cpp.s
+.PHONY : thirdparty/imgui/imgui.s
+
+# target to generate assembly for a file
+thirdparty/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui.cpp.s
+.PHONY : thirdparty/imgui/imgui.cpp.s
+
+thirdparty/imgui/imgui_draw.obj: thirdparty/imgui/imgui_draw.cpp.obj
+.PHONY : thirdparty/imgui/imgui_draw.obj
+
+# target to build an object file
+thirdparty/imgui/imgui_draw.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.obj
+.PHONY : thirdparty/imgui/imgui_draw.cpp.obj
+
+thirdparty/imgui/imgui_draw.i: thirdparty/imgui/imgui_draw.cpp.i
+.PHONY : thirdparty/imgui/imgui_draw.i
+
+# target to preprocess a source file
+thirdparty/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.i
+.PHONY : thirdparty/imgui/imgui_draw.cpp.i
+
+thirdparty/imgui/imgui_draw.s: thirdparty/imgui/imgui_draw.cpp.s
+.PHONY : thirdparty/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+thirdparty/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_draw.cpp.s
+.PHONY : thirdparty/imgui/imgui_draw.cpp.s
+
+thirdparty/imgui/imgui_tables.obj: thirdparty/imgui/imgui_tables.cpp.obj
+.PHONY : thirdparty/imgui/imgui_tables.obj
+
+# target to build an object file
+thirdparty/imgui/imgui_tables.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.obj
+.PHONY : thirdparty/imgui/imgui_tables.cpp.obj
+
+thirdparty/imgui/imgui_tables.i: thirdparty/imgui/imgui_tables.cpp.i
+.PHONY : thirdparty/imgui/imgui_tables.i
+
+# target to preprocess a source file
+thirdparty/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.i
+.PHONY : thirdparty/imgui/imgui_tables.cpp.i
+
+thirdparty/imgui/imgui_tables.s: thirdparty/imgui/imgui_tables.cpp.s
+.PHONY : thirdparty/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+thirdparty/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_tables.cpp.s
+.PHONY : thirdparty/imgui/imgui_tables.cpp.s
+
+thirdparty/imgui/imgui_widgets.obj: thirdparty/imgui/imgui_widgets.cpp.obj
+.PHONY : thirdparty/imgui/imgui_widgets.obj
+
+# target to build an object file
+thirdparty/imgui/imgui_widgets.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.obj
+.PHONY : thirdparty/imgui/imgui_widgets.cpp.obj
+
+thirdparty/imgui/imgui_widgets.i: thirdparty/imgui/imgui_widgets.cpp.i
+.PHONY : thirdparty/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+thirdparty/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.i
+.PHONY : thirdparty/imgui/imgui_widgets.cpp.i
+
+thirdparty/imgui/imgui_widgets.s: thirdparty/imgui/imgui_widgets.cpp.s
+.PHONY : thirdparty/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+thirdparty/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/thirdparty/imgui/imgui_widgets.cpp.s
+.PHONY : thirdparty/imgui/imgui_widgets.cpp.s
 
 # Help Target
 help:
@@ -1118,9 +1286,30 @@ help:
 	@echo ... src/textures/stb_image.obj
 	@echo ... src/textures/stb_image.i
 	@echo ... src/textures/stb_image.s
+	@echo ... src/ui/UserInterface.obj
+	@echo ... src/ui/UserInterface.i
+	@echo ... src/ui/UserInterface.s
 	@echo ... tests/PhysicsValidation.obj
 	@echo ... tests/PhysicsValidation.i
 	@echo ... tests/PhysicsValidation.s
+	@echo ... thirdparty/imgui/backends/imgui_impl_glfw.obj
+	@echo ... thirdparty/imgui/backends/imgui_impl_glfw.i
+	@echo ... thirdparty/imgui/backends/imgui_impl_glfw.s
+	@echo ... thirdparty/imgui/backends/imgui_impl_opengl3.obj
+	@echo ... thirdparty/imgui/backends/imgui_impl_opengl3.i
+	@echo ... thirdparty/imgui/backends/imgui_impl_opengl3.s
+	@echo ... thirdparty/imgui/imgui.obj
+	@echo ... thirdparty/imgui/imgui.i
+	@echo ... thirdparty/imgui/imgui.s
+	@echo ... thirdparty/imgui/imgui_draw.obj
+	@echo ... thirdparty/imgui/imgui_draw.i
+	@echo ... thirdparty/imgui/imgui_draw.s
+	@echo ... thirdparty/imgui/imgui_tables.obj
+	@echo ... thirdparty/imgui/imgui_tables.i
+	@echo ... thirdparty/imgui/imgui_tables.s
+	@echo ... thirdparty/imgui/imgui_widgets.obj
+	@echo ... thirdparty/imgui/imgui_widgets.i
+	@echo ... thirdparty/imgui/imgui_widgets.s
 .PHONY : help
 
 

@@ -223,12 +223,12 @@ thirdparty/glm/glm/clean: thirdparty/glm/glm/CMakeFiles/glm.dir/clean
 CMakeFiles/NBodySimulation.dir/all: thirdparty/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target NBodySimulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target NBodySimulation"
 .PHONY : CMakeFiles/NBodySimulation.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NBodySimulation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles 39
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/NBodySimulation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles 0
 .PHONY : CMakeFiles/NBodySimulation.dir/rule
@@ -240,7 +240,7 @@ NBodySimulation: CMakeFiles/NBodySimulation.dir/rule
 # codegen rule for target.
 CMakeFiles/NBodySimulation.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodySimulation.dir\build.make CMakeFiles/NBodySimulation.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Finished codegen for target NBodySimulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 "Finished codegen for target NBodySimulation"
 .PHONY : CMakeFiles/NBodySimulation.dir/codegen
 
 # clean rule for target.
@@ -1151,7 +1151,7 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/PhysicsValidation.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysicsValidation.dir\build.make CMakeFiles/PhysicsValidation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysicsValidation.dir\build.make CMakeFiles/PhysicsValidation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=18,19,20 "Built target PhysicsValidation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=25,26,27 "Built target PhysicsValidation"
 .PHONY : CMakeFiles/PhysicsValidation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1168,7 +1168,7 @@ PhysicsValidation: CMakeFiles/PhysicsValidation.dir/rule
 # codegen rule for target.
 CMakeFiles/PhysicsValidation.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysicsValidation.dir\build.make CMakeFiles/PhysicsValidation.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=18,19,20 "Finished codegen for target PhysicsValidation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=25,26,27 "Finished codegen for target PhysicsValidation"
 .PHONY : CMakeFiles/PhysicsValidation.dir/codegen
 
 # clean rule for target.
@@ -1215,7 +1215,7 @@ thirdparty/glfw/CMakeFiles/uninstall.dir/clean:
 thirdparty/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f thirdparty\glfw\src\CMakeFiles\glfw.dir\build.make thirdparty/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f thirdparty\glfw\src\CMakeFiles\glfw.dir\build.make thirdparty/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target glfw"
 .PHONY : thirdparty/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1232,7 +1232,7 @@ glfw: thirdparty/glfw/src/CMakeFiles/glfw.dir/rule
 # codegen rule for target.
 thirdparty/glfw/src/CMakeFiles/glfw.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f thirdparty\glfw\src\CMakeFiles\glfw.dir\build.make thirdparty/glfw/src/CMakeFiles/glfw.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Finished codegen for target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Finished codegen for target glfw"
 .PHONY : thirdparty/glfw/src/CMakeFiles/glfw.dir/codegen
 
 # clean rule for target.
@@ -1247,7 +1247,7 @@ thirdparty/glfw/src/CMakeFiles/glfw.dir/clean:
 thirdparty/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f thirdparty\glfw\src\CMakeFiles\update_mappings.dir\build.make thirdparty/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f thirdparty\glfw\src\CMakeFiles\update_mappings.dir\build.make thirdparty/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=45 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=52 "Built target update_mappings"
 .PHONY : thirdparty/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1264,7 +1264,7 @@ update_mappings: thirdparty/glfw/src/CMakeFiles/update_mappings.dir/rule
 # codegen rule for target.
 thirdparty/glfw/src/CMakeFiles/update_mappings.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f thirdparty\glfw\src\CMakeFiles\update_mappings.dir\build.make thirdparty/glfw/src/CMakeFiles/update_mappings.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=45 "Finished codegen for target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=52 "Finished codegen for target update_mappings"
 .PHONY : thirdparty/glfw/src/CMakeFiles/update_mappings.dir/codegen
 
 # clean rule for target.
@@ -1279,7 +1279,7 @@ thirdparty/glfw/src/CMakeFiles/update_mappings.dir/clean:
 thirdparty/glm/glm/CMakeFiles/glm.dir/all:
 	$(MAKE) $(MAKESILENT) -f thirdparty\glm\glm\CMakeFiles\glm.dir\build.make thirdparty/glm/glm/CMakeFiles/glm.dir/depend
 	$(MAKE) $(MAKESILENT) -f thirdparty\glm\glm\CMakeFiles\glm.dir\build.make thirdparty/glm/glm/CMakeFiles/glm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=43,44 "Built target glm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=50,51 "Built target glm"
 .PHONY : thirdparty/glm/glm/CMakeFiles/glm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1296,7 +1296,7 @@ glm: thirdparty/glm/glm/CMakeFiles/glm.dir/rule
 # codegen rule for target.
 thirdparty/glm/glm/CMakeFiles/glm.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f thirdparty\glm\glm\CMakeFiles\glm.dir\build.make thirdparty/glm/glm/CMakeFiles/glm.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=43,44 "Finished codegen for target glm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\rushi\OneDrive\Documents\NBodySimulation-main\build\CMakeFiles --progress-num=50,51 "Finished codegen for target glm"
 .PHONY : thirdparty/glm/glm/CMakeFiles/glm.dir/codegen
 
 # clean rule for target.

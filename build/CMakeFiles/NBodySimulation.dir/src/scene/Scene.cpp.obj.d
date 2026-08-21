@@ -280,4 +280,7 @@ CMakeFiles/NBodySimulation.dir/src/scene/Scene.cpp.obj: \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstdio \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cerrno \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc \
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/Physics.hpp \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/utility \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_relops.h
