@@ -23,11 +23,83 @@ struct TextureOption {
 };
 
 constexpr TextureOption textureOptions[] = {
-    {"Sun", "../src/textures/planets/2k_sun.png"},
     {"Earth", "../src/textures/planets/2k_earth_daymap.png"},
     {"Jupiter", "../src/textures/planets/2k_jupiter.png"},
     {"Saturn", "../src/textures/planets/2k_saturn.png"}
 };
+
+constexpr const char* surfaceTypeNames[] = {
+    "Texture",
+    "Procedural Earth-like",
+    "Procedural gas giant",
+    "Procedural lava",
+    "Procedural icy moon"
+};
+
+glm::vec3 hsvColor(float hue, float saturation, float value)
+{
+    float red = 0.0f;
+    float green = 0.0f;
+    float blue = 0.0f;
+    ImGui::ColorConvertHSVtoRGB(hue, saturation, value, red, green, blue);
+    return glm::vec3(red, green, blue);
+}
+
+void setDefaultPalette(RigidBody& body, PlanetSurfaceType type)
+{
+    if (type == PlanetSurfaceType::EarthLike)
+    {
+        body.surfaceColorA = glm::vec3(0.02f, 0.30f, 0.48f);
+        body.surfaceColorB = glm::vec3(0.08f, 0.30f, 0.10f);
+        body.surfaceColorC = glm::vec3(0.78f, 0.65f, 0.36f);
+    }
+    else if (type == PlanetSurfaceType::GasGiant)
+    {
+        body.surfaceColorA = glm::vec3(0.86f, 0.69f, 0.44f);
+        body.surfaceColorB = glm::vec3(0.48f, 0.18f, 0.07f);
+        body.surfaceColorC = glm::vec3(0.94f, 0.84f, 0.64f);
+    }
+    else if (type == PlanetSurfaceType::IcyMoon)
+    {
+        body.surfaceColorA = glm::vec3(0.025f, 0.09f, 0.22f);
+        body.surfaceColorB = glm::vec3(0.55f, 0.84f, 0.94f);
+        body.surfaceColorC = glm::vec3(0.12f, 0.48f, 0.95f);
+    }
+}
+
+void randomizePalette(RigidBody& body)
+{
+    float currentHue = 0.0f;
+    float currentSaturation = 0.0f;
+    float currentValue = 0.0f;
+    ImGui::ColorConvertRGBtoHSV(
+        body.surfaceColorA.x,
+        body.surfaceColorA.y,
+        body.surfaceColorA.z,
+        currentHue,
+        currentSaturation,
+        currentValue);
+    const float hue = std::fmod(currentHue + 0.61803398875f, 1.0f);
+
+    if (body.surfaceType == PlanetSurfaceType::EarthLike)
+    {
+        body.surfaceColorA = hsvColor(std::fmod(hue + 0.52f, 1.0f), 0.78f, 0.68f);
+        body.surfaceColorB = hsvColor(std::fmod(hue + 0.16f, 1.0f), 0.72f, 0.48f);
+        body.surfaceColorC = hsvColor(std::fmod(hue + 0.30f, 1.0f), 0.44f, 0.88f);
+    }
+    else if (body.surfaceType == PlanetSurfaceType::GasGiant)
+    {
+        body.surfaceColorA = hsvColor(hue, 0.62f, 0.88f);
+        body.surfaceColorB = hsvColor(std::fmod(hue + 0.11f, 1.0f), 0.78f, 0.48f);
+        body.surfaceColorC = hsvColor(std::fmod(hue + 0.54f, 1.0f), 0.38f, 0.96f);
+    }
+    else if (body.surfaceType == PlanetSurfaceType::IcyMoon)
+    {
+        body.surfaceColorA = hsvColor(hue, 0.86f, 0.28f);
+        body.surfaceColorB = hsvColor(std::fmod(hue + 0.08f, 1.0f), 0.35f, 0.95f);
+        body.surfaceColorC = hsvColor(std::fmod(hue + 0.17f, 1.0f), 0.82f, 0.92f);
+    }
+}
 
 bool inputVector3(const char* label, glm::dvec3& vector)
 {
@@ -267,7 +339,7 @@ void UserInterface::draw(Scene& scene, Simulation& simulation, Renderer& rendere
             RigidBody newStar(1.0, 0.00465047);
             newStar.name = "Primary Star";
             newStar.isStar = true;
-            newStar.loadTexture(textureOptions[0].path);
+            newStar.displayScale = 5.0f;
             scene.addBody(std::move(newStar));
         }
         else
@@ -280,9 +352,11 @@ void UserInterface::draw(Scene& scene, Simulation& simulation, Renderer& rendere
             newBody.position = glm::dvec3(orbitRadius, 0.0, 0.0);
             newBody.velocity = glm::dvec3(
                 0.0,
-                0.0,
-                std::sqrt(Physics::gravitationalConstant * centralMass / orbitRadius));
-            newBody.loadTexture(textureOptions[1].path);
+                std::sqrt(Physics::gravitationalConstant * centralMass / orbitRadius),
+                0.0);
+            newBody.surfaceType = PlanetSurfaceType::EarthLike;
+            newBody.proceduralSeed = static_cast<int>(bodies.size()) * 97 + 11;
+            newBody.displayScale = 300.0f;
             scene.addBody(std::move(newBody));
         }
         selectedBody = static_cast<int>(scene.bodies().size()) - 1;
@@ -319,32 +393,104 @@ void UserInterface::draw(Scene& scene, Simulation& simulation, Renderer& rendere
         physicsChanged |= inputVector3("Velocity (AU/year)", body.velocity);
         physicsChanged |= ImGui::Checkbox("Fixed in place", &body.fixed);
 
-        if (ImGui::Checkbox("Render as star", &body.isStar))
-        {
-            if (body.isStar && body.texturePath.empty())
-                body.loadTexture(textureOptions[0].path);
-        }
+        ImGui::Checkbox("Render as star", &body.isStar);
+        ImGui::SliderFloat(
+            "Display scale",
+            &body.displayScale,
+            0.1f,
+            500.0f,
+            "%.1f",
+            ImGuiSliderFlags_Logarithmic);
 
-        int textureIndex = findTextureOption(body.texturePath);
-        const char* texturePreview = textureIndex >= 0 ? textureOptions[textureIndex].name : "Custom";
-        if (ImGui::BeginCombo("Texture", texturePreview))
+        if (!body.isStar)
         {
-            for (int index = 0; index < static_cast<int>(std::size(textureOptions)); ++index)
+            int surfaceType = static_cast<int>(body.surfaceType);
+            if (ImGui::Combo(
+                    "Surface",
+                    &surfaceType,
+                    surfaceTypeNames,
+                    static_cast<int>(std::size(surfaceTypeNames))))
             {
-                const bool selected = textureIndex == index;
-                if (ImGui::Selectable(textureOptions[index].name, selected))
-                {
-                    body.loadTexture(textureOptions[index].path);
-                    textureIndex = index;
-                }
-                if (selected)
-                    ImGui::SetItemDefaultFocus();
+                body.surfaceType = static_cast<PlanetSurfaceType>(surfaceType);
+                setDefaultPalette(body, body.surfaceType);
             }
-            ImGui::EndCombo();
+
+            if (body.surfaceType == PlanetSurfaceType::Texture)
+            {
+                int textureIndex = findTextureOption(body.texturePath);
+                const char* texturePreview = textureIndex >= 0
+                    ? textureOptions[textureIndex].name
+                    : "Select texture";
+                if (ImGui::BeginCombo("Texture", texturePreview))
+                {
+                    for (int index = 0; index < static_cast<int>(std::size(textureOptions)); ++index)
+                    {
+                        const bool selected = textureIndex == index;
+                        if (ImGui::Selectable(textureOptions[index].name, selected))
+                        {
+                            body.loadTexture(textureOptions[index].path);
+                            textureIndex = index;
+                        }
+                        if (selected)
+                            ImGui::SetItemDefaultFocus();
+                    }
+                    ImGui::EndCombo();
+                }
+            }
+            else
+            {
+                ImGui::InputInt("Surface seed", &body.proceduralSeed);
+                ImGui::SliderFloat(
+                    "Surface scale",
+                    &body.terrainScale,
+                    0.5f,
+                    12.0f,
+                    "%.2f",
+                    ImGuiSliderFlags_Logarithmic);
+                if (body.surfaceType == PlanetSurfaceType::EarthLike)
+                {
+                    ImGui::SliderFloat("Ocean level", &body.oceanLevel, 0.20f, 0.80f, "%.2f");
+                    ImGui::SliderFloat("Cloud coverage", &body.cloudCoverage, 0.0f, 0.90f, "%.2f");
+                }
+
+                if (body.surfaceType == PlanetSurfaceType::EarthLike)
+                {
+                    ImGui::ColorEdit3("Ocean color", &body.surfaceColorA.x);
+                    ImGui::ColorEdit3("Land color", &body.surfaceColorB.x);
+                    ImGui::ColorEdit3("Highland color", &body.surfaceColorC.x);
+                }
+                else if (body.surfaceType == PlanetSurfaceType::GasGiant)
+                {
+                    ImGui::ColorEdit3("Band color A", &body.surfaceColorA.x);
+                    ImGui::ColorEdit3("Band color B", &body.surfaceColorB.x);
+                    ImGui::ColorEdit3("Accent / storm", &body.surfaceColorC.x);
+                }
+                else if (body.surfaceType == PlanetSurfaceType::IcyMoon)
+                {
+                    ImGui::ColorEdit3("Deep ice", &body.surfaceColorA.x);
+                    ImGui::ColorEdit3("Surface ice", &body.surfaceColorB.x);
+                    ImGui::ColorEdit3("Cracks / accent", &body.surfaceColorC.x);
+                }
+
+                if (body.surfaceType == PlanetSurfaceType::EarthLike
+                    || body.surfaceType == PlanetSurfaceType::GasGiant
+                    || body.surfaceType == PlanetSurfaceType::IcyMoon)
+                {
+                    if (ImGui::Button("Randomize palette"))
+                        randomizePalette(body);
+                }
+                ImGui::SliderFloat(
+                    "Surface motion",
+                    &body.surfaceAnimationSpeed,
+                    0.0f,
+                    4.0f,
+                    "%.2f");
+            }
         }
 
         body.bodyMass = std::max(body.bodyMass, 1.0e-12);
         body.bodyRadius = std::max(body.bodyRadius, 1.0e-12);
+        body.displayScale = std::max(body.displayScale, 0.01f);
         if (physicsChanged)
         {
             body.clearPath();

@@ -30,12 +30,23 @@ Well depth, width, intensity, surface opacity, and the displayed AU range are
 adjustable. The visualization is illustrative and remains finite when a body
 crosses a grid vertex.
 
-Default scene
--------------
-The starting system is a hierarchical three-star system in the XY plane. Two
-nearby stars orbit their shared center of mass while the pair and a third star
-orbit the system center of mass. All three use the Sun texture so their
-individual gravity wells are easy to compare.
+Procedural planets
+------------------
+Planet surfaces can use an ordinary texture or one of four seamless,
+seed-driven procedural materials: Earth-like, gas giant, lava, and icy moon. The
+procedural shader samples three-dimensional noise using each sphere's local
+position, avoiding UV seams and keeping the material attached while the body
+rotates. Earth-like worlds, gas giants, and icy moons have editable three-color
+palettes plus a palette randomizer for fantastical science-fiction worlds. Lava
+keeps its fixed black-and-orange emissive palette. Surface seed, scale, material
+settings, animation speed, colors, and visual size are adjustable without
+changing the body's physics.
+
+Default planet test scene
+-------------------------
+The starting system contains a plain placeholder star and four orbiting
+procedural planets demonstrating Earth-like, gas-giant, lava, and icy presets.
+The placeholder will be replaced when procedural star rendering is developed.
 
 Controls
 --------

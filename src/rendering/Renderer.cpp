@@ -8,6 +8,8 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
+#include <algorithm>
+#include <cmath>
 #include <vector>
 
 namespace {
@@ -86,19 +88,16 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
     starShader.use();
     starShader.setMat4("view", camera.getViewMatrix());
     starShader.setMat4("projection", camera.getPerspectiveMatrix());
+    starShader.setVec3("starColor", glm::vec3(1.0f, 0.62f, 0.16f));
 
     for (RigidBody& body : scene.bodies())
     {
         if (!body.isStar)
             continue;
 
-        body.bindTexture();
-        starTransforms.setScale(glm::vec3(RenderScale::radius(body.bodyRadius)));
+        starTransforms.setScale(glm::vec3(
+            RenderScale::radius(body.bodyRadius) * std::max(body.displayScale, 0.01f)));
         starTransforms.setTranslate(RenderScale::position(body.position));
-        starTransforms.setRotate(-90.0f, glm::vec3(1.0f, 0.0f, 0.0f));
-        starTransforms.setRotate(
-            static_cast<float>(100.0 * rotationTimeSeconds),
-            glm::vec3(0.0f, 0.0f, 1.0f));
         starTransforms.applyTransformation();
         sphereMesh.draw();
     }
@@ -108,6 +107,7 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
     planetShader.setMat4("projection", camera.getPerspectiveMatrix());
     planetShader.setVec3("viewPos", camera.position);
     planetShader.setVec3("lightColor", glm::vec3(1.0f));
+    planetShader.setFloat("timeSeconds", static_cast<float>(rotationTimeSeconds));
     if (!scene.bodies().empty())
         planetShader.setVec3("lightPos", RenderScale::position(scene.bodies().front().position));
 
@@ -116,12 +116,25 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
         if (body.isStar)
             continue;
 
-        body.bindTexture();
-        planetTransforms.setScale(glm::vec3(RenderScale::radius(body.bodyRadius)));
+        planetShader.setInt("surfaceType", static_cast<int>(body.surfaceType));
+        planetShader.setFloat("proceduralSeed", static_cast<float>(body.proceduralSeed));
+        planetShader.setFloat("terrainScale", body.terrainScale);
+        planetShader.setFloat("oceanLevel", body.oceanLevel);
+        planetShader.setFloat("cloudCoverage", body.cloudCoverage);
+        planetShader.setFloat("animationSpeed", body.surfaceAnimationSpeed);
+        planetShader.setVec3("surfaceColorA", body.surfaceColorA);
+        planetShader.setVec3("surfaceColorB", body.surfaceColorB);
+        planetShader.setVec3("surfaceColorC", body.surfaceColorC);
+        if (body.surfaceType == PlanetSurfaceType::Texture)
+            body.bindTexture();
+
+        planetTransforms.setScale(glm::vec3(
+            RenderScale::radius(body.bodyRadius) * std::max(body.displayScale, 0.01f)));
         planetTransforms.setTranslate(RenderScale::position(body.position));
-        planetTransforms.setRotate(-90.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+        if (body.surfaceType == PlanetSurfaceType::Texture)
+            planetTransforms.setRotate(-90.0f, glm::vec3(1.0f, 0.0f, 0.0f));
         planetTransforms.setRotate(
-            static_cast<float>(100.0 * rotationTimeSeconds),
+            static_cast<float>(20.0 * rotationTimeSeconds * body.surfaceAnimationSpeed),
             glm::vec3(0.0f, 0.0f, 1.0f));
         planetTransforms.applyTransformation();
         sphereMesh.draw();

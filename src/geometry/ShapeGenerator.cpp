@@ -99,31 +99,14 @@ MeshData ShapeGenerator::makeUnitSquare()
 {
     MeshData data;
 
-    // Vertices for a unit square centered at the origin ([-0.5, 0.5] in both x and y)
-    data.vertices.push_back(-0.5f);  // Bottom-left
-    data.vertices.push_back(-0.5f);
-    data.vertices.push_back(0.0f);  // z = 0 for 2D square
-
-    data.vertices.push_back(0.5f);   // Bottom-right
-    data.vertices.push_back(-0.5f);
-    data.vertices.push_back(0.0f);  // z = 0 for 2D square
-
-    data.vertices.push_back(0.5f);   // Top-right
-    data.vertices.push_back(0.5f);
-    data.vertices.push_back(0.0f);  // z = 0 for 2D square
-
-    data.vertices.push_back(-0.5f);  // Top-left
-    data.vertices.push_back(0.5f);
-    data.vertices.push_back(0.0f);  // z = 0 for 2D square
-
-    // Indices for the two triangles that form the square
-    data.indices.push_back(0);
-    data.indices.push_back(1);
-    data.indices.push_back(2);
-
-    data.indices.push_back(0);
-    data.indices.push_back(2);
-    data.indices.push_back(3);
+    // Position, normal, and UV data matching Mesh's interleaved layout.
+    data.vertices = {
+        -0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.0f, 1.0f,
+         0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  1.0f, 1.0f,
+         0.5f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  1.0f, 0.0f,
+        -0.5f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.0f, 0.0f
+    };
+    data.indices = {0, 1, 2, 0, 2, 3};
 
     return data;
 }

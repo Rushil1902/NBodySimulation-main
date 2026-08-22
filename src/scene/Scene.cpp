@@ -8,22 +8,39 @@
 #include <utility>
 
 namespace {
-constexpr const char* sunTexture = "../src/textures/planets/2k_sun.png";
+constexpr double pi = 3.14159265358979323846;
 
-RigidBody makeStar(
+RigidBody makeProceduralPlanet(
     const char* name,
     double massSolar,
     double radiusAU,
-    const glm::dvec3& positionAU,
-    const glm::dvec3& velocityAUPerYear)
+    double orbitRadiusAU,
+    double orbitAngle,
+    PlanetSurfaceType surfaceType,
+    int seed,
+    float displayScale,
+    float terrainScale)
 {
-    RigidBody star(massSolar, radiusAU);
-    star.name = name;
-    star.position = positionAU;
-    star.velocity = velocityAUPerYear;
-    star.isStar = true;
-    star.loadTexture(sunTexture);
-    return star;
+    const double orbitalSpeed = std::sqrt(
+        Physics::gravitationalConstant * (1.0 + massSolar) / orbitRadiusAU);
+    const glm::dvec3 radialDirection(
+        std::cos(orbitAngle),
+        std::sin(orbitAngle),
+        0.0);
+    const glm::dvec3 tangentDirection(
+        -std::sin(orbitAngle),
+        std::cos(orbitAngle),
+        0.0);
+
+    RigidBody planet(massSolar, radiusAU);
+    planet.name = name;
+    planet.position = radialDirection * orbitRadiusAU;
+    planet.velocity = tangentDirection * orbitalSpeed;
+    planet.surfaceType = surfaceType;
+    planet.proceduralSeed = seed;
+    planet.displayScale = displayScale;
+    planet.terrainScale = terrainScale;
+    return planet;
 }
 }
 
@@ -31,57 +48,95 @@ Scene Scene::createDefault()
 {
     Scene scene;
 
-    // A hierarchical triple: two close stars orbit their shared barycenter,
-    // while that binary and the third star orbit the system barycenter.
-    // All motion begins in the XY plane and total linear momentum is zero.
-    constexpr double primaryMass = 1.0;
-    constexpr double secondaryMass = 0.8;
-    constexpr double outerMass = 0.6;
-    constexpr double innerSeparationAU = 1.5;
-    constexpr double outerSeparationAU = 7.0;
+    std::vector<RigidBody> planets;
 
-    constexpr double binaryMass = primaryMass + secondaryMass;
-    constexpr double totalMass = binaryMass + outerMass;
+    RigidBody earthLike = makeProceduralPlanet(
+        "Procedural Terran",
+        3.0034896e-6,
+        4.26352e-5,
+        1.5,
+        0.0,
+        PlanetSurfaceType::EarthLike,
+        101,
+        300.0f,
+        3.6f);
+    earthLike.oceanLevel = 0.50f;
+    earthLike.cloudCoverage = 0.42f;
+    earthLike.surfaceAnimationSpeed = 0.65f;
+    earthLike.surfaceColorA = glm::vec3(0.02f, 0.30f, 0.48f);
+    earthLike.surfaceColorB = glm::vec3(0.08f, 0.30f, 0.10f);
+    earthLike.surfaceColorC = glm::vec3(0.78f, 0.65f, 0.36f);
+    planets.push_back(std::move(earthLike));
 
-    const double binaryBarycenterX = -outerSeparationAU * outerMass / totalMass;
-    const double outerStarX = outerSeparationAU * binaryMass / totalMass;
-    const double primaryOffsetX = -innerSeparationAU * secondaryMass / binaryMass;
-    const double secondaryOffsetX = innerSeparationAU * primaryMass / binaryMass;
+    RigidBody gasGiant = makeProceduralPlanet(
+        "Procedural Gas Giant",
+        9.54588e-4,
+        0.000477895,
+        4.0,
+        2.0 * pi / 3.0,
+        PlanetSurfaceType::GasGiant,
+        202,
+        35.0f,
+        4.8f);
+    gasGiant.surfaceAnimationSpeed = 0.45f;
+    gasGiant.surfaceColorA = glm::vec3(0.86f, 0.69f, 0.44f);
+    gasGiant.surfaceColorB = glm::vec3(0.48f, 0.18f, 0.07f);
+    gasGiant.surfaceColorC = glm::vec3(0.94f, 0.84f, 0.64f);
+    planets.push_back(std::move(gasGiant));
 
-    const double innerAngularSpeed = std::sqrt(
-        Physics::gravitationalConstant * binaryMass
-        / (innerSeparationAU * innerSeparationAU * innerSeparationAU));
-    const double outerAngularSpeed = std::sqrt(
-        Physics::gravitationalConstant * totalMass
-        / (outerSeparationAU * outerSeparationAU * outerSeparationAU));
-    const double binaryBarycenterVelocityY = outerAngularSpeed * binaryBarycenterX;
+    RigidBody lavaWorld = makeProceduralPlanet(
+        "Procedural Lava World",
+        1.5e-5,
+        6.0e-5,
+        0.70,
+        4.0 * pi / 3.0,
+        PlanetSurfaceType::Lava,
+        303,
+        250.0f,
+        4.2f);
+    lavaWorld.surfaceAnimationSpeed = 0.80f;
+    planets.push_back(std::move(lavaWorld));
 
-    scene.sceneBodies.push_back(makeStar(
-        "Aster A",
-        primaryMass,
-        0.00465047,
-        glm::dvec3(binaryBarycenterX + primaryOffsetX, 0.0, 0.0),
-        glm::dvec3(
-            0.0,
-            binaryBarycenterVelocityY + innerAngularSpeed * primaryOffsetX,
-            0.0)));
+    RigidBody icyMoon = makeProceduralPlanet(
+        "Procedural Icy Moon",
+        3.7e-8,
+        1.16e-5,
+        6.0,
+        4.75,
+        PlanetSurfaceType::IcyMoon,
+        404,
+        1000.0f,
+        5.2f);
+    icyMoon.surfaceAnimationSpeed = 0.08f;
+    icyMoon.surfaceColorA = glm::vec3(0.025f, 0.09f, 0.22f);
+    icyMoon.surfaceColorB = glm::vec3(0.55f, 0.84f, 0.94f);
+    icyMoon.surfaceColorC = glm::vec3(0.12f, 0.48f, 0.95f);
+    planets.push_back(std::move(icyMoon));
 
-    scene.sceneBodies.push_back(makeStar(
-        "Aster B",
-        secondaryMass,
-        0.0042,
-        glm::dvec3(binaryBarycenterX + secondaryOffsetX, 0.0, 0.0),
-        glm::dvec3(
-            0.0,
-            binaryBarycenterVelocityY + innerAngularSpeed * secondaryOffsetX,
-            0.0)));
+    double totalMass = 1.0;
+    glm::dvec3 weightedPosition(0.0);
+    glm::dvec3 weightedVelocity(0.0);
+    for (const RigidBody& planet : planets)
+    {
+        totalMass += planet.bodyMass;
+        weightedPosition += planet.bodyMass * planet.position;
+        weightedVelocity += planet.bodyMass * planet.velocity;
+    }
 
-    scene.sceneBodies.push_back(makeStar(
-        "Aster C",
-        outerMass,
-        0.0038,
-        glm::dvec3(outerStarX, 0.0, 0.0),
-        glm::dvec3(0.0, outerAngularSpeed * outerStarX, 0.0)));
+    RigidBody star(1.0, 0.00465047);
+    star.name = "Placeholder Star";
+    star.position = -weightedPosition / totalMass;
+    star.velocity = -weightedVelocity / totalMass;
+    star.isStar = true;
+    star.displayScale = 5.0f;
+    scene.sceneBodies.push_back(std::move(star));
+
+    for (RigidBody& planet : planets)
+    {
+        planet.position += scene.sceneBodies.front().position;
+        planet.velocity += scene.sceneBodies.front().velocity;
+        scene.sceneBodies.push_back(std::move(planet));
+    }
 
     scene.captureInitialState();
     return scene;

@@ -355,4 +355,12 @@ CMakeFiles/NBodySimulation.dir/src/rendering/Renderer.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/geometry/ShapeGenerator.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/rendering/RenderScale.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/scene/Scene.hpp \
- C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/RigidBody.hpp
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/RigidBody.hpp \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/algorithm \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_algo.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/algorithmfwd.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_heap.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_tempbuf.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/glue_algorithm_defs.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h
