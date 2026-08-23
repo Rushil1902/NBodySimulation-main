@@ -36,11 +36,13 @@ Planet surfaces can use an ordinary texture or one of four seamless,
 seed-driven procedural materials: Earth-like, gas giant, lava, and icy moon. The
 procedural shader samples three-dimensional noise using each sphere's local
 position, avoiding UV seams and keeping the material attached while the body
-rotates. Earth-like worlds, gas giants, and icy moons have editable three-color
-palettes plus a palette randomizer for fantastical science-fiction worlds. Lava
-keeps its fixed black-and-orange emissive palette. Surface seed, scale, material
-settings, animation speed, colors, and visual size are adjustable without
-changing the body's physics.
+rotates. Earth-like worlds, gas giants, and icy moons have editable seven-color
+palettes plus independent seed and palette randomizers for fantastical
+science-fiction worlds. Vibrancy and color-banding controls range from softer
+natural blending to bold graphic color regions. Lava keeps its fixed
+black-and-orange emissive palette. Surface seed, scale, material settings,
+animation speed, colors, and visual size are adjustable without changing the
+body's physics.
 
 Default planet test scene
 -------------------------

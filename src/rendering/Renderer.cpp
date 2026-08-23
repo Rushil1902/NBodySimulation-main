@@ -125,6 +125,12 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
         planetShader.setVec3("surfaceColorA", body.surfaceColorA);
         planetShader.setVec3("surfaceColorB", body.surfaceColorB);
         planetShader.setVec3("surfaceColorC", body.surfaceColorC);
+        planetShader.setVec3("surfaceColorD", body.surfaceColorD);
+        planetShader.setVec3("surfaceColorE", body.surfaceColorE);
+        planetShader.setVec3("surfaceColorF", body.surfaceColorF);
+        planetShader.setVec3("surfaceColorG", body.surfaceColorG);
+        planetShader.setFloat("surfaceVibrancy", body.surfaceVibrancy);
+        planetShader.setFloat("surfaceColorBanding", body.surfaceColorBanding);
         if (body.surfaceType == PlanetSurfaceType::Texture)
             body.bindTexture();
 

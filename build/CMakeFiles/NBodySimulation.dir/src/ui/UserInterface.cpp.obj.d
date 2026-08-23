@@ -373,4 +373,11 @@ CMakeFiles/NBodySimulation.dir/src/ui/UserInterface.cpp.obj: \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_tempbuf.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/glue_algorithm_defs.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/random \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/random.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/opt_random.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/random.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/numeric \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_numeric.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h

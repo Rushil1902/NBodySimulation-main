@@ -63,9 +63,13 @@ Scene Scene::createDefault()
     earthLike.oceanLevel = 0.50f;
     earthLike.cloudCoverage = 0.42f;
     earthLike.surfaceAnimationSpeed = 0.65f;
-    earthLike.surfaceColorA = glm::vec3(0.02f, 0.30f, 0.48f);
-    earthLike.surfaceColorB = glm::vec3(0.08f, 0.30f, 0.10f);
-    earthLike.surfaceColorC = glm::vec3(0.78f, 0.65f, 0.36f);
+    earthLike.surfaceColorA = glm::vec3(0.015f, 0.07f, 0.18f);
+    earthLike.surfaceColorB = glm::vec3(0.0f, 0.55f, 0.75f);
+    earthLike.surfaceColorC = glm::vec3(0.03f, 0.24f, 0.10f);
+    earthLike.surfaceColorD = glm::vec3(0.48f, 0.82f, 0.08f);
+    earthLike.surfaceColorE = glm::vec3(0.64f, 0.38f, 0.82f);
+    earthLike.surfaceColorF = glm::vec3(0.88f, 0.94f, 1.0f);
+    earthLike.surfaceColorG = glm::vec3(0.98f, 0.99f, 1.0f);
     planets.push_back(std::move(earthLike));
 
     RigidBody gasGiant = makeProceduralPlanet(
@@ -79,9 +83,13 @@ Scene Scene::createDefault()
         35.0f,
         4.8f);
     gasGiant.surfaceAnimationSpeed = 0.45f;
-    gasGiant.surfaceColorA = glm::vec3(0.86f, 0.69f, 0.44f);
-    gasGiant.surfaceColorB = glm::vec3(0.48f, 0.18f, 0.07f);
-    gasGiant.surfaceColorC = glm::vec3(0.94f, 0.84f, 0.64f);
+    gasGiant.surfaceColorA = glm::vec3(0.08f, 0.015f, 0.18f);
+    gasGiant.surfaceColorB = glm::vec3(0.28f, 0.05f, 0.55f);
+    gasGiant.surfaceColorC = glm::vec3(0.65f, 0.08f, 0.72f);
+    gasGiant.surfaceColorD = glm::vec3(0.95f, 0.20f, 0.52f);
+    gasGiant.surfaceColorE = glm::vec3(1.0f, 0.55f, 0.18f);
+    gasGiant.surfaceColorF = glm::vec3(0.02f, 0.75f, 0.92f);
+    gasGiant.surfaceColorG = glm::vec3(0.80f, 0.98f, 1.0f);
     planets.push_back(std::move(gasGiant));
 
     RigidBody lavaWorld = makeProceduralPlanet(
@@ -108,9 +116,13 @@ Scene Scene::createDefault()
         1000.0f,
         5.2f);
     icyMoon.surfaceAnimationSpeed = 0.08f;
-    icyMoon.surfaceColorA = glm::vec3(0.025f, 0.09f, 0.22f);
-    icyMoon.surfaceColorB = glm::vec3(0.55f, 0.84f, 0.94f);
-    icyMoon.surfaceColorC = glm::vec3(0.12f, 0.48f, 0.95f);
+    icyMoon.surfaceColorA = glm::vec3(0.015f, 0.025f, 0.18f);
+    icyMoon.surfaceColorB = glm::vec3(0.05f, 0.44f, 0.78f);
+    icyMoon.surfaceColorC = glm::vec3(0.58f, 0.90f, 1.0f);
+    icyMoon.surfaceColorD = glm::vec3(0.58f, 0.12f, 1.0f);
+    icyMoon.surfaceColorE = glm::vec3(0.08f, 0.03f, 0.28f);
+    icyMoon.surfaceColorF = glm::vec3(0.0f, 0.95f, 0.78f);
+    icyMoon.surfaceColorG = glm::vec3(0.94f, 0.99f, 1.0f);
     planets.push_back(std::move(icyMoon));
 
     double totalMass = 1.0;

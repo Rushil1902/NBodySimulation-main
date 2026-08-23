@@ -14,6 +14,7 @@
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
+#include <random>
 #include <string>
 
 namespace {
@@ -45,59 +46,105 @@ glm::vec3 hsvColor(float hue, float saturation, float value)
     return glm::vec3(red, green, blue);
 }
 
+float wrapHue(float hue)
+{
+    hue = std::fmod(hue, 1.0f);
+    return hue < 0.0f ? hue + 1.0f : hue;
+}
+
+std::mt19937& surfaceRandomGenerator()
+{
+    static std::mt19937 generator(std::random_device{}());
+    return generator;
+}
+
+float randomFloat(float minimum, float maximum)
+{
+    return std::uniform_real_distribution<float>(minimum, maximum)(surfaceRandomGenerator());
+}
+
+void randomizeSeed(RigidBody& body)
+{
+    body.proceduralSeed = std::uniform_int_distribution<int>(
+        1,
+        9999999)(surfaceRandomGenerator());
+}
+
 void setDefaultPalette(RigidBody& body, PlanetSurfaceType type)
 {
     if (type == PlanetSurfaceType::EarthLike)
     {
-        body.surfaceColorA = glm::vec3(0.02f, 0.30f, 0.48f);
-        body.surfaceColorB = glm::vec3(0.08f, 0.30f, 0.10f);
-        body.surfaceColorC = glm::vec3(0.78f, 0.65f, 0.36f);
+        body.surfaceColorA = glm::vec3(0.015f, 0.07f, 0.18f);
+        body.surfaceColorB = glm::vec3(0.0f, 0.55f, 0.75f);
+        body.surfaceColorC = glm::vec3(0.03f, 0.24f, 0.10f);
+        body.surfaceColorD = glm::vec3(0.48f, 0.82f, 0.08f);
+        body.surfaceColorE = glm::vec3(0.64f, 0.38f, 0.82f);
+        body.surfaceColorF = glm::vec3(0.88f, 0.94f, 1.0f);
+        body.surfaceColorG = glm::vec3(0.98f, 0.99f, 1.0f);
     }
     else if (type == PlanetSurfaceType::GasGiant)
     {
-        body.surfaceColorA = glm::vec3(0.86f, 0.69f, 0.44f);
-        body.surfaceColorB = glm::vec3(0.48f, 0.18f, 0.07f);
-        body.surfaceColorC = glm::vec3(0.94f, 0.84f, 0.64f);
+        body.surfaceColorA = glm::vec3(0.08f, 0.015f, 0.18f);
+        body.surfaceColorB = glm::vec3(0.28f, 0.05f, 0.55f);
+        body.surfaceColorC = glm::vec3(0.65f, 0.08f, 0.72f);
+        body.surfaceColorD = glm::vec3(0.95f, 0.20f, 0.52f);
+        body.surfaceColorE = glm::vec3(1.0f, 0.55f, 0.18f);
+        body.surfaceColorF = glm::vec3(0.02f, 0.75f, 0.92f);
+        body.surfaceColorG = glm::vec3(0.80f, 0.98f, 1.0f);
     }
     else if (type == PlanetSurfaceType::IcyMoon)
     {
-        body.surfaceColorA = glm::vec3(0.025f, 0.09f, 0.22f);
-        body.surfaceColorB = glm::vec3(0.55f, 0.84f, 0.94f);
-        body.surfaceColorC = glm::vec3(0.12f, 0.48f, 0.95f);
+        body.surfaceColorA = glm::vec3(0.015f, 0.025f, 0.18f);
+        body.surfaceColorB = glm::vec3(0.05f, 0.44f, 0.78f);
+        body.surfaceColorC = glm::vec3(0.58f, 0.90f, 1.0f);
+        body.surfaceColorD = glm::vec3(0.58f, 0.12f, 1.0f);
+        body.surfaceColorE = glm::vec3(0.08f, 0.03f, 0.28f);
+        body.surfaceColorF = glm::vec3(0.0f, 0.95f, 0.78f);
+        body.surfaceColorG = glm::vec3(0.94f, 0.99f, 1.0f);
     }
+
+    body.surfaceVibrancy = 1.35f;
+    body.surfaceColorBanding = 0.55f;
 }
 
 void randomizePalette(RigidBody& body)
 {
-    float currentHue = 0.0f;
-    float currentSaturation = 0.0f;
-    float currentValue = 0.0f;
-    ImGui::ColorConvertRGBtoHSV(
-        body.surfaceColorA.x,
-        body.surfaceColorA.y,
-        body.surfaceColorA.z,
-        currentHue,
-        currentSaturation,
-        currentValue);
-    const float hue = std::fmod(currentHue + 0.61803398875f, 1.0f);
+    const float hue = randomFloat(0.0f, 1.0f);
 
     if (body.surfaceType == PlanetSurfaceType::EarthLike)
     {
-        body.surfaceColorA = hsvColor(std::fmod(hue + 0.52f, 1.0f), 0.78f, 0.68f);
-        body.surfaceColorB = hsvColor(std::fmod(hue + 0.16f, 1.0f), 0.72f, 0.48f);
-        body.surfaceColorC = hsvColor(std::fmod(hue + 0.30f, 1.0f), 0.44f, 0.88f);
+        const float landHue = wrapHue(hue + randomFloat(0.20f, 0.55f));
+        const float accentHue = wrapHue(landHue + randomFloat(0.08f, 0.25f));
+        body.surfaceColorA = hsvColor(hue, 0.95f, 0.24f);
+        body.surfaceColorB = hsvColor(wrapHue(hue + 0.04f), 0.85f, 0.88f);
+        body.surfaceColorC = hsvColor(landHue, 0.92f, 0.30f);
+        body.surfaceColorD = hsvColor(wrapHue(landHue + 0.03f), 0.82f, 0.84f);
+        body.surfaceColorE = hsvColor(accentHue, 0.60f, 0.90f);
+        body.surfaceColorF = hsvColor(wrapHue(hue + 0.10f), 0.18f, 1.0f);
+        body.surfaceColorG = hsvColor(wrapHue(accentHue + 0.45f), 0.10f, 1.0f);
     }
     else if (body.surfaceType == PlanetSurfaceType::GasGiant)
     {
-        body.surfaceColorA = hsvColor(hue, 0.62f, 0.88f);
-        body.surfaceColorB = hsvColor(std::fmod(hue + 0.11f, 1.0f), 0.78f, 0.48f);
-        body.surfaceColorC = hsvColor(std::fmod(hue + 0.54f, 1.0f), 0.38f, 0.96f);
+        const float secondaryHue = wrapHue(hue + randomFloat(0.08f, 0.25f));
+        const float stormHue = wrapHue(hue + randomFloat(0.35f, 0.65f));
+        body.surfaceColorA = hsvColor(hue, 0.92f, 0.26f);
+        body.surfaceColorB = hsvColor(wrapHue(hue + 0.03f), 0.86f, 0.55f);
+        body.surfaceColorC = hsvColor(secondaryHue, 0.78f, 0.82f);
+        body.surfaceColorD = hsvColor(wrapHue(secondaryHue + 0.06f), 0.68f, 0.96f);
+        body.surfaceColorE = hsvColor(wrapHue(secondaryHue + 0.14f), 0.52f, 1.0f);
+        body.surfaceColorF = hsvColor(stormHue, 0.90f, 0.88f);
+        body.surfaceColorG = hsvColor(wrapHue(stormHue + 0.04f), 0.22f, 1.0f);
     }
     else if (body.surfaceType == PlanetSurfaceType::IcyMoon)
     {
-        body.surfaceColorA = hsvColor(hue, 0.86f, 0.28f);
-        body.surfaceColorB = hsvColor(std::fmod(hue + 0.08f, 1.0f), 0.35f, 0.95f);
-        body.surfaceColorC = hsvColor(std::fmod(hue + 0.17f, 1.0f), 0.82f, 0.92f);
+        const float crackHue = wrapHue(hue + randomFloat(0.18f, 0.48f));
+        body.surfaceColorA = hsvColor(hue, 0.92f, 0.22f);
+        body.surfaceColorB = hsvColor(wrapHue(hue + 0.04f), 0.78f, 0.68f);
+        body.surfaceColorC = hsvColor(wrapHue(hue + 0.08f), 0.34f, 0.98f);
+        body.surfaceColorD = hsvColor(crackHue, 0.90f, 0.96f);
+        body.surfaceColorE = hsvColor(wrapHue(hue - 0.03f), 0.88f, 0.32f);
+        body.surfaceColorF = hsvColor(wrapHue(crackHue + 0.12f), 0.78f, 0.98f);
+        body.surfaceColorG = hsvColor(wrapHue(hue + 0.12f), 0.12f, 1.0f);
     }
 }
 
@@ -440,6 +487,8 @@ void UserInterface::draw(Scene& scene, Simulation& simulation, Renderer& rendere
             else
             {
                 ImGui::InputInt("Surface seed", &body.proceduralSeed);
+                if (ImGui::Button("Randomize seed"))
+                    randomizeSeed(body);
                 ImGui::SliderFloat(
                     "Surface scale",
                     &body.terrainScale,
@@ -453,31 +502,61 @@ void UserInterface::draw(Scene& scene, Simulation& simulation, Renderer& rendere
                     ImGui::SliderFloat("Cloud coverage", &body.cloudCoverage, 0.0f, 0.90f, "%.2f");
                 }
 
-                if (body.surfaceType == PlanetSurfaceType::EarthLike)
-                {
-                    ImGui::ColorEdit3("Ocean color", &body.surfaceColorA.x);
-                    ImGui::ColorEdit3("Land color", &body.surfaceColorB.x);
-                    ImGui::ColorEdit3("Highland color", &body.surfaceColorC.x);
-                }
-                else if (body.surfaceType == PlanetSurfaceType::GasGiant)
-                {
-                    ImGui::ColorEdit3("Band color A", &body.surfaceColorA.x);
-                    ImGui::ColorEdit3("Band color B", &body.surfaceColorB.x);
-                    ImGui::ColorEdit3("Accent / storm", &body.surfaceColorC.x);
-                }
-                else if (body.surfaceType == PlanetSurfaceType::IcyMoon)
-                {
-                    ImGui::ColorEdit3("Deep ice", &body.surfaceColorA.x);
-                    ImGui::ColorEdit3("Surface ice", &body.surfaceColorB.x);
-                    ImGui::ColorEdit3("Cracks / accent", &body.surfaceColorC.x);
-                }
-
                 if (body.surfaceType == PlanetSurfaceType::EarthLike
                     || body.surfaceType == PlanetSurfaceType::GasGiant
                     || body.surfaceType == PlanetSurfaceType::IcyMoon)
                 {
                     if (ImGui::Button("Randomize palette"))
                         randomizePalette(body);
+                    ImGui::SliderFloat(
+                        "Vibrancy",
+                        &body.surfaceVibrancy,
+                        0.50f,
+                        2.0f,
+                        "%.2f");
+                    ImGui::SliderFloat(
+                        "Color banding",
+                        &body.surfaceColorBanding,
+                        0.0f,
+                        1.0f,
+                        "%.2f");
+
+                    if (ImGui::TreeNodeEx(
+                            "Palette colors",
+                            ImGuiTreeNodeFlags_DefaultOpen))
+                    {
+                        if (body.surfaceType == PlanetSurfaceType::EarthLike)
+                        {
+                            ImGui::ColorEdit3("Deep ocean", &body.surfaceColorA.x);
+                            ImGui::ColorEdit3("Shallow ocean", &body.surfaceColorB.x);
+                            ImGui::ColorEdit3("Lowlands", &body.surfaceColorC.x);
+                            ImGui::ColorEdit3("Vegetation", &body.surfaceColorD.x);
+                            ImGui::ColorEdit3("Highlands", &body.surfaceColorE.x);
+                            ImGui::ColorEdit3("Polar ice", &body.surfaceColorF.x);
+                            ImGui::ColorEdit3("Clouds", &body.surfaceColorG.x);
+                        }
+                        else if (body.surfaceType == PlanetSurfaceType::GasGiant)
+                        {
+                            ImGui::ColorEdit3("Deep band", &body.surfaceColorA.x);
+                            ImGui::ColorEdit3("Primary band", &body.surfaceColorB.x);
+                            ImGui::ColorEdit3("Secondary band", &body.surfaceColorC.x);
+                            ImGui::ColorEdit3("Bright band", &body.surfaceColorD.x);
+                            ImGui::ColorEdit3("Fine band", &body.surfaceColorE.x);
+                            ImGui::ColorEdit3("Storm", &body.surfaceColorF.x);
+                            ImGui::ColorEdit3("Storm highlight", &body.surfaceColorG.x);
+                        }
+                        else
+                        {
+                            ImGui::ColorEdit3("Abyssal ice", &body.surfaceColorA.x);
+                            ImGui::ColorEdit3("Base ice", &body.surfaceColorB.x);
+                            ImGui::ColorEdit3("Frost", &body.surfaceColorC.x);
+                            ImGui::ColorEdit3("Cracks", &body.surfaceColorD.x);
+                            ImGui::ColorEdit3("Crater shadows", &body.surfaceColorE.x);
+                            ImGui::ColorEdit3("Crystal accent", &body.surfaceColorF.x);
+                            ImGui::ColorEdit3("Highlights", &body.surfaceColorG.x);
+                        }
+                        ImGui::TreePop();
+                    }
                 }
                 ImGui::SliderFloat(
                     "Surface motion",

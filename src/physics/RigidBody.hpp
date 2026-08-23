@@ -42,6 +42,12 @@ class RigidBody{
         glm::vec3 surfaceColorA = glm::vec3(0.02f, 0.30f, 0.48f);
         glm::vec3 surfaceColorB = glm::vec3(0.08f, 0.30f, 0.10f);
         glm::vec3 surfaceColorC = glm::vec3(0.78f, 0.75f, 0.67f);
+        glm::vec3 surfaceColorD = glm::vec3(0.48f, 0.82f, 0.08f);
+        glm::vec3 surfaceColorE = glm::vec3(0.64f, 0.38f, 0.82f);
+        glm::vec3 surfaceColorF = glm::vec3(0.88f, 0.94f, 1.0f);
+        glm::vec3 surfaceColorG = glm::vec3(0.98f, 0.99f, 1.0f);
+        float surfaceVibrancy = 1.35f;
+        float surfaceColorBanding = 0.55f;
 
         void setPosition(const glm::dvec3& vecPosition);
         void setVelocity(const glm::dvec3& vecVelocity);
