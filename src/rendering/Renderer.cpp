@@ -29,9 +29,12 @@ Renderer::Renderer()
                    "../src/graphics/PlanetShaders/PlanetShader.fs"),
       starShader("../src/graphics/StarShaders/StarShader.vs",
                  "../src/graphics/StarShaders/StarShader.fs"),
+      coronaShader("../src/graphics/StarShaders/CoronaShader.vs",
+                   "../src/graphics/StarShaders/CoronaShader.fs"),
       gridShader("../src/graphics/GridShaders/GridShader.vs",
                  "../src/graphics/GridShaders/GridShader.fs"),
       starTransforms(starShader),
+      coronaTransforms(coronaShader),
       planetTransforms(planetShader),
       sphereMesh(ShapeGenerator::makeUnitSphere(128, 128)),
       grid(64),
@@ -88,16 +91,34 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
     starShader.use();
     starShader.setMat4("view", camera.getViewMatrix());
     starShader.setMat4("projection", camera.getPerspectiveMatrix());
-    starShader.setVec3("starColor", glm::vec3(1.0f, 0.62f, 0.16f));
+    starShader.setVec3("viewPos", camera.position);
+    starShader.setFloat("timeSeconds", static_cast<float>(rotationTimeSeconds));
 
     for (RigidBody& body : scene.bodies())
     {
         if (!body.isStar)
             continue;
 
-        starTransforms.setScale(glm::vec3(
-            RenderScale::radius(body.bodyRadius) * std::max(body.displayScale, 0.01f)));
+        starShader.setFloat("starSeed", static_cast<float>(body.starSeed));
+        starShader.setFloat("cellScale", body.starCellScale);
+        starShader.setFloat("activity", body.starActivity);
+        starShader.setFloat("animationSpeed", body.starAnimationSpeed);
+        starShader.setFloat("spotAmount", body.starSpotAmount);
+        starShader.setVec3("starColorA", body.starColorA);
+        starShader.setVec3("starColorB", body.starColorB);
+        starShader.setVec3("starColorC", body.starColorC);
+        starShader.setVec3("starColorD", body.starColorD);
+        starShader.setVec3("starColorE", body.starColorE);
+        starShader.setVec3("starColorF", body.starColorF);
+        starShader.setVec3("starColorG", body.starColorG);
+
+        const float starRadius = RenderScale::radius(body.bodyRadius)
+            * std::max(body.displayScale, 0.01f);
+        starTransforms.setScale(glm::vec3(starRadius));
         starTransforms.setTranslate(RenderScale::position(body.position));
+        starTransforms.setRotate(
+            static_cast<float>(12.0 * rotationTimeSeconds * body.starAnimationSpeed),
+            glm::vec3(0.0f, 0.0f, 1.0f));
         starTransforms.applyTransformation();
         sphereMesh.draw();
     }
@@ -106,10 +127,28 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
     planetShader.setMat4("view", camera.getViewMatrix());
     planetShader.setMat4("projection", camera.getPerspectiveMatrix());
     planetShader.setVec3("viewPos", camera.position);
-    planetShader.setVec3("lightColor", glm::vec3(1.0f));
     planetShader.setFloat("timeSeconds", static_cast<float>(rotationTimeSeconds));
-    if (!scene.bodies().empty())
-        planetShader.setVec3("lightPos", RenderScale::position(scene.bodies().front().position));
+    const RigidBody* primaryStar = nullptr;
+    for (const RigidBody& body : scene.bodies())
+    {
+        if (body.isStar)
+        {
+            primaryStar = &body;
+            break;
+        }
+    }
+    if (primaryStar != nullptr)
+    {
+        planetShader.setVec3("lightPos", RenderScale::position(primaryStar->position));
+        planetShader.setVec3(
+            "lightColor",
+            glm::mix(glm::vec3(1.0f), primaryStar->starColorE, 0.22f));
+    }
+    else
+    {
+        planetShader.setVec3("lightPos", glm::vec3(0.0f));
+        planetShader.setVec3("lightColor", glm::vec3(1.0f));
+    }
 
     for (RigidBody& body : scene.bodies())
     {
@@ -145,6 +184,40 @@ void Renderer::render(Scene& scene, bool physicsAdvanced, double rotationTimeSec
         planetTransforms.applyTransformation();
         sphereMesh.draw();
     }
+
+    coronaShader.use();
+    coronaShader.setMat4("view", camera.getViewMatrix());
+    coronaShader.setMat4("projection", camera.getPerspectiveMatrix());
+    coronaShader.setVec3("viewPos", camera.position);
+    coronaShader.setFloat("timeSeconds", static_cast<float>(rotationTimeSeconds));
+
+    glDepthMask(GL_FALSE);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+    for (RigidBody& body : scene.bodies())
+    {
+        if (!body.isStar || body.starCoronaIntensity <= 0.0f)
+            continue;
+
+        coronaShader.setFloat("starSeed", static_cast<float>(body.starSeed));
+        coronaShader.setFloat("activity", body.starActivity);
+        coronaShader.setFloat("animationSpeed", body.starAnimationSpeed);
+        coronaShader.setFloat("coronaIntensity", body.starCoronaIntensity);
+        coronaShader.setVec3("coronaColorInner", body.starColorF);
+        coronaShader.setVec3("coronaColorOuter", body.starColorG);
+
+        const float starRadius = RenderScale::radius(body.bodyRadius)
+            * std::max(body.displayScale, 0.01f);
+        const float coronaRadius = starRadius * (1.0f + body.starCoronaSize);
+        coronaTransforms.setScale(glm::vec3(coronaRadius));
+        coronaTransforms.setTranslate(RenderScale::position(body.position));
+        coronaTransforms.setRotate(
+            static_cast<float>(-8.0 * rotationTimeSeconds * body.starAnimationSpeed),
+            glm::vec3(0.0f, 0.0f, 1.0f));
+        coronaTransforms.applyTransformation();
+        sphereMesh.draw();
+    }
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glDepthMask(GL_TRUE);
 
     if (trailsVisible)
     {

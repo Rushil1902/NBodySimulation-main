@@ -1,2 +1,2 @@
-TwoBodyOrbitValidation 11 0.0075181
+TwoBodyOrbitValidation 12 0.00736992
 ---

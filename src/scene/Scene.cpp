@@ -136,11 +136,19 @@ Scene Scene::createDefault()
     }
 
     RigidBody star(1.0, 0.00465047);
-    star.name = "Placeholder Star";
+    star.name = "Procedural Blue-White Star";
     star.position = -weightedPosition / totalMass;
     star.velocity = -weightedVelocity / totalMass;
     star.isStar = true;
     star.displayScale = 5.0f;
+    star.starSurfacePreset = StarSurfacePreset::BlueWhite;
+    star.starSeed = 2454345;
+    star.starCellScale = 7.0f;
+    star.starActivity = 1.15f;
+    star.starAnimationSpeed = 0.65f;
+    star.starSpotAmount = 0.30f;
+    star.starCoronaSize = 0.13f;
+    star.starCoronaIntensity = 1.15f;
     scene.sceneBodies.push_back(std::move(star));
 
     for (RigidBody& planet : planets)

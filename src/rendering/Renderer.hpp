@@ -41,9 +41,11 @@ private:
     Shader pathShader;
     Shader planetShader;
     Shader starShader;
+    Shader coronaShader;
     Shader gridShader;
     SkyboxMesh skybox;
     Transform starTransforms;
+    Transform coronaTransforms;
     Transform planetTransforms;
     Mesh sphereMesh;
     TrailMesh trailMesh;

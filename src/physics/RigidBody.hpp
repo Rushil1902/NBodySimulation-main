@@ -11,6 +11,13 @@ enum class PlanetSurfaceType {
         IcyMoon
 };
 
+enum class StarSurfacePreset {
+        Solar = 0,
+        BlueWhite,
+        RedDwarf,
+        Alien
+};
+
 class RigidBody{
 
     public:
@@ -33,6 +40,21 @@ class RigidBody{
         unsigned int textureID = 0;
         bool isStar = false;
         float displayScale = 1.0f;
+        StarSurfacePreset starSurfacePreset = StarSurfacePreset::BlueWhite;
+        int starSeed = 2454345;
+        float starCellScale = 7.0f;
+        float starActivity = 1.0f;
+        float starAnimationSpeed = 0.65f;
+        float starSpotAmount = 0.28f;
+        float starCoronaSize = 0.12f;
+        float starCoronaIntensity = 1.0f;
+        glm::vec3 starColorA = glm::vec3(0.005f, 0.05f, 0.14f);
+        glm::vec3 starColorB = glm::vec3(0.0f, 0.30f, 0.48f);
+        glm::vec3 starColorC = glm::vec3(0.0f, 0.68f, 0.72f);
+        glm::vec3 starColorD = glm::vec3(0.38f, 0.90f, 0.82f);
+        glm::vec3 starColorE = glm::vec3(1.0f, 0.98f, 0.70f);
+        glm::vec3 starColorF = glm::vec3(1.0f, 1.0f, 0.95f);
+        glm::vec3 starColorG = glm::vec3(0.12f, 0.85f, 1.0f);
         PlanetSurfaceType surfaceType = PlanetSurfaceType::Texture;
         int proceduralSeed = 1;
         float terrainScale = 3.0f;

@@ -44,11 +44,21 @@ black-and-orange emissive palette. Surface seed, scale, material settings,
 animation speed, colors, and visual size are adjustable without changing the
 body's physics.
 
-Default planet test scene
--------------------------
-The starting system contains a plain placeholder star and four orbiting
+Procedural stars
+----------------
+Stars use a seamless animated cellular shader for convection granules, turbulent
+plasma, hot cell centers, and darker starspot clusters. A second noise-displaced
+additive shell forms the irregular corona and short flare-like protrusions. The
+solar, blue-white, red-dwarf, and alien presets each have editable seven-color
+palettes, independent seed and palette randomizers, activity and starspot
+controls, surface motion, and adjustable corona size and intensity. Stellar
+appearance is independent of mass, radius, and gravity. The primary star's hot
+surface color also gives planet lighting a subtle matching tint.
+
+Default procedural showcase
+---------------------------
+The starting system contains a procedural blue-white star and four orbiting
 procedural planets demonstrating Earth-like, gas-giant, lava, and icy presets.
-The placeholder will be replaced when procedural star rendering is developed.
 
 Controls
 --------
