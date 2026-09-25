@@ -43,6 +43,47 @@ add_executable(NBodySimulation
     ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
     )
 
+set_target_properties(NBodySimulation PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+)
+foreach(NBODY_BUILD_CONFIG Debug Release RelWithDebInfo MinSizeRel)
+    string(TOUPPER "${NBODY_BUILD_CONFIG}" NBODY_BUILD_CONFIG_UPPER)
+    set_target_properties(NBodySimulation PROPERTIES
+        "RUNTIME_OUTPUT_DIRECTORY_${NBODY_BUILD_CONFIG_UPPER}" "${CMAKE_BINARY_DIR}"
+    )
+endforeach()
+
+set(NBODY_RUNTIME_ASSET_DIR "${CMAKE_BINARY_DIR}/assets")
+add_custom_target(NBodyAssets ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/graphics/meshShaders"
+        "${NBODY_RUNTIME_ASSET_DIR}/shaders/mesh"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/graphics/SkyboxShaders"
+        "${NBODY_RUNTIME_ASSET_DIR}/shaders/skybox"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/graphics/TrailShaders"
+        "${NBODY_RUNTIME_ASSET_DIR}/shaders/trail"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/graphics/PlanetShaders"
+        "${NBODY_RUNTIME_ASSET_DIR}/shaders/planet"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/graphics/StarShaders"
+        "${NBODY_RUNTIME_ASSET_DIR}/shaders/star"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/graphics/GridShaders"
+        "${NBODY_RUNTIME_ASSET_DIR}/shaders/grid"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/textures/planets"
+        "${NBODY_RUNTIME_ASSET_DIR}/textures/planets"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/src/textures/skybox"
+        "${NBODY_RUNTIME_ASSET_DIR}/textures/skybox"
+    COMMENT "Staging runtime shaders and textures"
+    VERBATIM
+)
+add_dependencies(NBodySimulation NBodyAssets)
+
 # Link libraries
 target_link_libraries(NBodySimulation PRIVATE OpenGL::GL glfw)
 

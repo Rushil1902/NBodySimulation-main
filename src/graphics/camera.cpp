@@ -4,6 +4,7 @@
 #include "glm/fwd.hpp"
 #include <glm/gtc/matrix_transform.hpp>
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 
 Camera::Camera(Shader& shader):ourShader(shader),position(1.0f),viewMatrix(1.0f),projectionMatrix(1.0f)

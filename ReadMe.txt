@@ -73,5 +73,9 @@ cmake -S . -B build
 cmake --build build
 ctest --test-dir build --output-on-failure
 
-Run the executable with the build directory as its working directory so the
-current shader and texture paths resolve correctly.
+The build stages shaders and textures in an assets directory beside the
+executable. The simulator resolves assets from the executable location, so it
+can be launched from the build directory, repository root, an IDE, or another
+working directory. Keep the generated executable and assets directory together
+when moving the program. Missing, empty, uncompilable, or un-linkable shaders
+now stop startup and report the exact file and graphics-driver diagnostic.

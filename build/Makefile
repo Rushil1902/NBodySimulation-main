@@ -184,6 +184,19 @@ NBodySimulation/fast:
 .PHONY : NBodySimulation/fast
 
 #=============================================================================
+# Target rules for targets named NBodyAssets
+
+# Build rule for target.
+NBodyAssets: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 NBodyAssets
+.PHONY : NBodyAssets
+
+# fast build rule for target.
+NBodyAssets/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBodyAssets.dir\build.make CMakeFiles/NBodyAssets.dir/build
+.PHONY : NBodyAssets/fast
+
+#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -1222,6 +1235,7 @@ help:
 	@echo ... ExperimentalSubmit
 	@echo ... ExperimentalTest
 	@echo ... ExperimentalUpdate
+	@echo ... NBodyAssets
 	@echo ... Nightly
 	@echo ... NightlyBuild
 	@echo ... NightlyConfigure

@@ -1,5 +1,6 @@
 #include "Application.hpp"
 
+#include "core/AssetPaths.hpp"
 #include "rendering/Renderer.hpp"
 #include "scene/Scene.hpp"
 #include "simulation/Simulation.hpp"
@@ -26,6 +27,8 @@ int Application::run()
 
     std::cout << "Current working directory:\n"
               << std::filesystem::current_path() << '\n'
+              << "Runtime asset directory:\n"
+              << AssetPaths::root() << '\n'
               << "Simulation controls: Space = pause/resume, N = single step, "
               << "R = reset, -/= = slower/faster\n";
 
@@ -85,11 +88,19 @@ bool Application::initialize()
 
     glfwSwapInterval(1);
 
-    renderer = std::make_unique<Renderer>();
-    renderer->attachToWindow(window);
-    scene = std::make_unique<Scene>(Scene::createDefault());
-    simulation = std::make_unique<Simulation>(*scene);
-    userInterface = std::make_unique<UserInterface>(window);
+    try
+    {
+        renderer = std::make_unique<Renderer>();
+        renderer->attachToWindow(window);
+        scene = std::make_unique<Scene>(Scene::createDefault());
+        simulation = std::make_unique<Simulation>(*scene);
+        userInterface = std::make_unique<UserInterface>(window);
+    }
+    catch (const std::exception& error)
+    {
+        std::cerr << "Application initialization failed: " << error.what() << '\n';
+        return false;
+    }
     return true;
 }
 

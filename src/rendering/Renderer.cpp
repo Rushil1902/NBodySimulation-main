@@ -1,5 +1,6 @@
 #include "Renderer.hpp"
 
+#include "core/AssetPaths.hpp"
 #include "geometry/ShapeGenerator.hpp"
 #include "rendering/RenderScale.hpp"
 #include "scene/Scene.hpp"
@@ -19,20 +20,20 @@ constexpr float farPlane = 200.0f;
 }
 
 Renderer::Renderer()
-    : cameraShader("../src/graphics/meshShaders/3.3.shader.vs",
-                   "../src/graphics/meshShaders/3.3.shader.fs"),
-      skyboxShader("../src/graphics/SkyboxShaders/SkyboxShader.vs",
-                   "../src/graphics/SkyboxShaders/SkyboxShader.fs"),
-      pathShader("../src/graphics/TrailShaders/TrailShader.vs",
-                 "../src/graphics/TrailShaders/TrailShader.fs"),
-      planetShader("../src/graphics/PlanetShaders/PlanetShader.vs",
-                   "../src/graphics/PlanetShaders/PlanetShader.fs"),
-      starShader("../src/graphics/StarShaders/StarShader.vs",
-                 "../src/graphics/StarShaders/StarShader.fs"),
-      coronaShader("../src/graphics/StarShaders/CoronaShader.vs",
-                   "../src/graphics/StarShaders/CoronaShader.fs"),
-      gridShader("../src/graphics/GridShaders/GridShader.vs",
-                 "../src/graphics/GridShaders/GridShader.fs"),
+    : cameraShader(AssetPaths::resolve("shaders/mesh/3.3.shader.vs"),
+                   AssetPaths::resolve("shaders/mesh/3.3.shader.fs")),
+      skyboxShader(AssetPaths::resolve("shaders/skybox/SkyboxShader.vs"),
+                   AssetPaths::resolve("shaders/skybox/SkyboxShader.fs")),
+      pathShader(AssetPaths::resolve("shaders/trail/TrailShader.vs"),
+                 AssetPaths::resolve("shaders/trail/TrailShader.fs")),
+      planetShader(AssetPaths::resolve("shaders/planet/PlanetShader.vs"),
+                   AssetPaths::resolve("shaders/planet/PlanetShader.fs")),
+      starShader(AssetPaths::resolve("shaders/star/StarShader.vs"),
+                 AssetPaths::resolve("shaders/star/StarShader.fs")),
+      coronaShader(AssetPaths::resolve("shaders/star/CoronaShader.vs"),
+                   AssetPaths::resolve("shaders/star/CoronaShader.fs")),
+      gridShader(AssetPaths::resolve("shaders/grid/GridShader.vs"),
+                 AssetPaths::resolve("shaders/grid/GridShader.fs")),
       starTransforms(starShader),
       coronaTransforms(coronaShader),
       planetTransforms(planetShader),
@@ -41,12 +42,12 @@ Renderer::Renderer()
       camera(cameraShader)
 {
     const std::vector<std::string> faces = {
-        "../src/textures/skybox/GalaxyTex_PositiveX.png",
-        "../src/textures/skybox/GalaxyTex_NegativeX.png",
-        "../src/textures/skybox/GalaxyTex_PositiveY.png",
-        "../src/textures/skybox/GalaxyTex_NegativeY.png",
-        "../src/textures/skybox/GalaxyTex_PositiveZ.png",
-        "../src/textures/skybox/GalaxyTex_NegativeZ.png"
+        AssetPaths::resolve("textures/skybox/GalaxyTex_PositiveX.png").string(),
+        AssetPaths::resolve("textures/skybox/GalaxyTex_NegativeX.png").string(),
+        AssetPaths::resolve("textures/skybox/GalaxyTex_PositiveY.png").string(),
+        AssetPaths::resolve("textures/skybox/GalaxyTex_NegativeY.png").string(),
+        AssetPaths::resolve("textures/skybox/GalaxyTex_PositiveZ.png").string(),
+        AssetPaths::resolve("textures/skybox/GalaxyTex_NegativeZ.png").string()
     };
     skybox.loadCubemap(faces);
 

@@ -1,4 +1,5 @@
 C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/CMakeFiles/NBodySimulation.dir
+C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/CMakeFiles/NBodyAssets.dir
 C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/CMakeFiles/Experimental.dir
 C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/CMakeFiles/Nightly.dir
 C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/build/CMakeFiles/Continuous.dir

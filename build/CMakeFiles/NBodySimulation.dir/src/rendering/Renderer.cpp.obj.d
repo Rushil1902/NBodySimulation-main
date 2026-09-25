@@ -340,18 +340,42 @@ CMakeFiles/NBodySimulation.dir/src/rendering/Renderer.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/TrailMesh.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/geometry/Transform.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/shader.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/fstream \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/filesystem \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ratio \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ctime \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/locale \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/time_members.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/messages_members.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/iomanip \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/sstream \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/codecvt \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ext/concurrence.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/shared_ptr_base.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/allocated_ptr.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/fstream \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/basic_file.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/c++io.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/sstream \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/camera.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/shader.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glfw/include/GLFW/glfw3.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/shader.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/SpaceTimeGrid.hpp \
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/AssetPaths.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/geometry/ShapeGenerator.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/rendering/RenderScale.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/scene/Scene.hpp \

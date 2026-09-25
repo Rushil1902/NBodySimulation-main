@@ -1,6 +1,8 @@
 #include "RigidBody.hpp"
+#include "core/AssetPaths.hpp"
 #include <glad/glad.h>
 #include <glm/glm.hpp>
+#include <filesystem>
 #include <iostream>
 #include <stb_image.h>
 
@@ -46,6 +48,17 @@ void RigidBody::clearPath()
 void RigidBody::loadTexture(const std::string& filepath)
 {
     texturePath = filepath;
+    std::filesystem::path resolvedPath;
+    try
+    {
+        resolvedPath = AssetPaths::resolve(filepath);
+    }
+    catch (const std::exception& error)
+    {
+        std::cerr << "Failed to load texture: " << error.what() << std::endl;
+        return;
+    }
+
     glGenTextures(1, &textureID);
     glBindTexture(GL_TEXTURE_2D, textureID);
 
@@ -57,7 +70,7 @@ void RigidBody::loadTexture(const std::string& filepath)
 
     // load image
     int width, height, nrChannels;
-    unsigned char* data = stbi_load(filepath.c_str(), &width, &height, &nrChannels, 0);
+    unsigned char* data = stbi_load(resolvedPath.string().c_str(), &width, &height, &nrChannels, 0);
     if (data){
         GLenum format = (nrChannels == 4) ? GL_RGBA : GL_RGB;
         glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0 , format, GL_UNSIGNED_BYTE, data);
@@ -65,7 +78,7 @@ void RigidBody::loadTexture(const std::string& filepath)
         stbi_image_free(data);
     }
     else {
-        std::cerr << "Failed to load texture: " << filepath << std::endl;
+        std::cerr << "Failed to load texture: " << resolvedPath << std::endl;
     }
 }
 

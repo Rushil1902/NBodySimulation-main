@@ -117,6 +117,85 @@ CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj: \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/backward/auto_ptr.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h \
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/AssetPaths.hpp \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/filesystem \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/system_error \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/error_constants.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cerrno \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/stdexcept \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/string \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/c++locale.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/clocale \
+ C:/mingw32/i686-w64-mingw32/include/locale.h \
+ C:/mingw32/i686-w64-mingw32/include/stdio.h \
+ C:/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cctype \
+ C:/mingw32/i686-w64-mingw32/include/ctype.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/initializer_list \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/string_view \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstdlib \
+ C:/mingw32/i686-w64-mingw32/include/stdlib.h \
+ C:/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/stdlib.h \
+ C:/mingw32/i686-w64-mingw32/include/malloc.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/mm_malloc.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstdio \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstddef \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/uses_allocator_args.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstdint \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ratio \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/limits \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ctime \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/locale \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cwctype \
+ C:/mingw32/i686-w64-mingw32/include/wctype.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/ctype_base.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/streambuf \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/streambuf.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/ctype_inline.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/time_members.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/messages_members.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/iomanip \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/sstream \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/istream \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ios \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ostream \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ostream.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ostream.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/codecvt \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h \
+ C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/rendering/Renderer.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/Mesh.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glad/include/glad/glad.h \
@@ -126,14 +205,7 @@ CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glm/glm/detail/_fixes.hpp \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cmath \
  C:/mingw32/i686-w64-mingw32/include/math.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
- C:/mingw32/i686-w64-mingw32/include/stdlib.h \
- C:/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/stdlib.h \
- C:/mingw32/i686-w64-mingw32/include/malloc.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/mm_malloc.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/specfun.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/limits \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/tr1/gamma.tcc \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/tr1/special_function_util.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/tr1/bessel_function.tcc \
@@ -149,10 +221,7 @@ CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glm/glm/detail/setup.hpp \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cassert \
  C:/mingw32/i686-w64-mingw32/include/assert.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstdlib \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstddef \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glm/glm/simd/platform.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstdint \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/climits \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cfloat \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/float.h \
@@ -185,16 +254,12 @@ CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj: \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/functional \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/std_function.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/unordered_map \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/initializer_list \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/unordered_map.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/hashtable.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/hashtable_policy.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/enable_special_members.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/node_handle.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/erase_if.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/uses_allocator_args.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/vector \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_vector.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -310,59 +375,13 @@ CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glm/glm/detail/func_integer.inl \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/SkyboxMesh.hpp \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/iostream \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ostream \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ostream.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ios \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/c++locale.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/clocale \
- C:/mingw32/i686-w64-mingw32/include/locale.h \
- C:/mingw32/i686-w64-mingw32/include/stdio.h \
- C:/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cctype \
- C:/mingw32/i686-w64-mingw32/include/ctype.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/string \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_string.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/string_view \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cstdio \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cerrno \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/system_error \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/error_constants.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/stdexcept \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/streambuf \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/streambuf.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/cwctype \
- C:/mingw32/i686-w64-mingw32/include/wctype.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/ctype_base.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/ctype_inline.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/ostream.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/istream \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/core/TrailMesh.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/geometry/Transform.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/shader.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/fstream \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/basic_file.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/c++io.h \
  C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fstream.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/sstream \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/camera.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/graphics/shader.h \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/thirdparty/glfw/include/GLFW/glfw3.h \
@@ -372,22 +391,4 @@ CMakeFiles/NBodySimulation.dir/src/application/Application.cpp.obj: \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/RigidBody.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/simulation/Simulation.hpp \
  C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/physics/Physics.hpp \
- C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/ui/UserInterface.hpp \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/filesystem \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ratio \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/ctime \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/locale \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/time_members.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/i686-w64-mingw32/bits/messages_members.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/iomanip \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/codecvt \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h \
- C:/mingw32/lib/gcc/i686-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h
+ C:/Users/rushi/OneDrive/Documents/NBodySimulation-main/src/ui/UserInterface.hpp

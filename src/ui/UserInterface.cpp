@@ -24,9 +24,9 @@ struct TextureOption {
 };
 
 constexpr TextureOption textureOptions[] = {
-    {"Earth", "../src/textures/planets/2k_earth_daymap.png"},
-    {"Jupiter", "../src/textures/planets/2k_jupiter.png"},
-    {"Saturn", "../src/textures/planets/2k_saturn.png"}
+    {"Earth", "textures/planets/2k_earth_daymap.png"},
+    {"Jupiter", "textures/planets/2k_jupiter.png"},
+    {"Saturn", "textures/planets/2k_saturn.png"}
 };
 
 constexpr const char* surfaceTypeNames[] = {
